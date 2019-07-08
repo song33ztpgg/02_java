@@ -37,15 +37,17 @@ public class PrintfTest {
 		int input2 ; 
 		int input1 ; 
 				
+		int Z =10;
+		
 		System.out.println("값을 입력하시오");
 		
 		
 		
-		System.out.printf("입력한값은 %d 입니다" , Z); 
+		System.out.printf("입력한값은 %d 입니다" , +Z); 
 		
-		
+		int scan;
 		Scanner scan1; 
-		scan1 = new Scanner(System.in); 
+		scan = new scan1(System.in); 
 		
 		input1 = scan1.nextInt(); 
 		input1 = scan1.nextInt();

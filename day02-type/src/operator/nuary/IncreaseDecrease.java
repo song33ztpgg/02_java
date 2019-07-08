@@ -29,7 +29,7 @@ public class IncreaseDecrease {
 		int i=0; 
 		for(i=0 ; i<100 ; i++) 
 		{ 
-			Thr
+			
 
 			System.out.println("경봉이형 나이 "+i);
 	
