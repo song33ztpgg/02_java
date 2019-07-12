@@ -48,7 +48,22 @@ public class ForTest {
 			sum += number4;
 		} 
 		
-		System.out.printf("4. 총합은 %d 입니다(while문 사용)\n",sum);
+		System.out.printf("4. 총합은 %d 입니다(while문 사용)\n",sum); 
+		 
+		//////////////////////////////////////////////////////////////// 
+		
+		System.out.println("----------------------------");
+		for(int square =1; square <=10; square++) { 
+			System.out.printf("%2d %2d %3d", square , square ,square * square);
+		} 
+		
+		int[] numbers = {1,2,3,4,5,6,7,8,9,10}; 
+		
+		for(int num : numbers) { 
+			System.out.printf("%2d X %2d = %3d" , num, num, num * num);
+		}
+		
+		
 		 
 		
 		

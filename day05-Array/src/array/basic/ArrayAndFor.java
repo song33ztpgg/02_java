@@ -10,13 +10,12 @@ public class ArrayAndFor {
 		int sumary = 0;
 		
 		
-		for(int idx = 0; idx < 10; idx++) 
-		{ 
+		for(int idx = 0; idx < 10; idx++) { 
 			numbers[idx] = (idx + 1) * 10; 
 			sumary += numbers[idx]; 
 		}  
 		
 		System.out.println("총합은 " + sumary + " 입니다");
 		}
-
+	
 }

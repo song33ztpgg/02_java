@@ -1,67 +1,48 @@
 package test;
 
-import java.util.Random;
+import java.util.Scanner;
 
 public class Test1 {
 
 	public static void main(String[] args) {
 
 	
+//야구구간의 1~ㅍ 5 선수 방어율읿력하고 그중 방어률이 낮ㅂ은 최고의 튜스를 찾는 클래스 
+// 몇번째팀 몇번째선수		
+		Scanner scan = new Scanner(System.in); 
+		double[][] ERA = new double[3][5]; 
+		double min = 10.0; 
+		double player =0;  
+		int tem = 0; 
+		int player2 = 0;
 		
-		
-		int[][] numbers; 
-		numbers = new int[5][5]; 
-		int count = 1;
-
-		
-		int[] salaries; 
-		salaries = new int[10];
-		
-		
-
-			salaries[0]= 10;
-			salaries[1]= 55;
-			salaries[2]= 86;
-			salaries[3]= 23;
-			salaries[4]= 98;
-			salaries[5]= 34;
-			salaries[6]= 50;
-			salaries[7]= 100;
-			salaries[8]= 120;
-			salaries[9]= 130;
-		
-		
-		for(int idx = 0;idx < salaries.length; idx++) { 
-			System.out.printf("salaries[%d] = %d\n", idx,salaries[idx]);
-		}
-		
-		
-				
-		System.out.printf("\n\n\n"); 
-		
-		System.out.println("배열의 길이 :" + salaries.length);
-		
-//		System.out.printf("salaries[10] = %d", salaries[10]); 
-//		System.out.printf("salaries[10] = %d", salaries[-1]);
-		//java.lang.ArrayIndexOutOfBoundsException   - 배열범위를 벋어난 오류
-		
-		
-		//다중배열 
-		// ================================================================
-		for(int i = 0; i <= 4 ; i++) { 
-		
-			for(int j=0 ; j <=4; j++) { 
-			
-				count++;	
-				numbers[i][j] = count;
-				
-				System.out.printf("%2d " , numbers[i][j]); 
-				
+		System.out.println("1선발 2선발 3선발 4선발 5선발 방어율 입력");  
+		for(int i= 0; i < ERA.length ; i++) { 
+			System.out.printf("%d 번째 팀 1~5 투수 방어율 : " , i +1); 
+			for(int j = 0 ; j < ERA[i].length ; j++) { 
+				player = scan.nextDouble(); 
+				ERA[i][j] = player; 
 			} 
 			System.out.println();
-			
-		}
+		} 
 		
+		
+		  
+		for(int i= 0; i < ERA.length ; i++) {  
+			for(int j = 0 ; j < ERA[i].length ; j++) { 
+				
+				if(ERA[i][j] < min) { 
+					min = ERA[i][j]; 
+					tem = i; 
+					player2 = j;
+				}  
+			}
+		} 
+		
+		System.out.printf("최고의 선수는 %d팀의 %d번째 선수이며 \n방어율은 %.2f 입니다", tem + 1,player2+1,ERA[tem][player2]);
+		
+
+
 		
 		
 		
