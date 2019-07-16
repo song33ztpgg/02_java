@@ -28,6 +28,7 @@ while(numberSelect !=9) {
 		System.out.println("값을 입력하세요"); 
 		numberSelect = scan.nextInt();
 		System.out.println("-------------------------------------------");
+		
 		switch(numberSelect) {
 		case 1 : 
 	
@@ -117,33 +118,59 @@ while(numberSelect !=9) {
 		 * 그 배열의 각 원소의 평균을 구하여 리턴하는 메소드 
 		 
 		 * */ 
+			int[] ages = {12,15,10,18,17}; 
+			double avgOfAges = Test.avgOfArray(ages); 
+		
+			System.out.printf("평균은 %.2f 입니다\n\n",avgOfAges);
 			break;
 // ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■		
 		case 9: 
-			/*
-		 * [ 9 ]
-		 * char  타입의 연산자와 두 개의 정수를 매개 변수로 입력받아 
-		 * 입력된 연산자 '+' 일때만 
-		 * 두정수의 합을 구하여 출력하는 메소드 
 		
-		 *  
-		 * */
 		int k = 1;
 		System.out.println("부호를 입력하시오");
-		while(k) {
-		String code = scan.nextString(); 
-		if(code != '+') { 
+		
+		while(k != 0) 
+		{
+
+		String code = scan.nextLine();
+		
+	    if(code == "+")
+	    { 
+	    	System.out.printf("%d ,  %s",k , code);
 			System.out.println("다시 입력하세요"); 
-		} 
 		}
-		int num1 = scan.nextInt();
-		int num2 = scan.nextInt();
+	    else
+		{  
+				System.out.println("0");
+				k = 0;
+		}
 	    
-		break;	
-// ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■		
-		
-		
 		}
-	}
-	}
-}
+		/*
+		System.out.println("숫자를 입력하시오");
+		int num1 = scan.nextInt();
+		int num2 = scan.nextInt(); 
+		int sum = Test.adder(num1, num2);
+	    System.out.printf("%2d + %2d = %d",num1,num2,sum);*/
+		break;	
+		
+// ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■		
+		case 10: 
+			int a = 10; 
+			int b = 10; 
+			
+			double sum = Test.test(a); 
+			System.out.printf("%f\n",sum);
+		
+		
+		
+	}}}}
+
+
+
+
+
+
+
+// 매소드 넘겨줄때 타입이 다양한것도 보낼수 있는가? int char  
+// return 넘겨주는거 여러게 

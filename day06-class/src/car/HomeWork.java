@@ -11,7 +11,7 @@ public class HomeWork {
 	// ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 
 	public void printNineNineTalbe(int stage) { 
-		System.out.printf("%d단 출력\n\n", stage+1);
+		System.out.printf("%d단 출력\n\n", stage);
 	}
 	// ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 	/*
@@ -110,7 +110,7 @@ public void printNineNineTalbeFromArray(int stage) {
 	
 	// ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 	
-	/*
+	/**
 	 * [ 8 ]
 	 * 정수가 저장된 int 배열을 매개변수로 입력받아 
 	 * 그 배열의 각 원소의 평균을 구하여 리턴하는 메소드 
@@ -121,6 +121,29 @@ public void printNineNineTalbeFromArray(int stage) {
 	 *  
 	 *  re: double 배열의 각 원소의 평균 
 	 * */ 
+
+	public double avgOfArray(int[] numbers) {
+		//1.배열 원소의 총합  
+		//(1) 총합 변수 선언,초기화 
+		int sum =0; 
+		//(2)평균변수 선언
+		double avr; 
+		//(3)배열의 원소의 합을 구함 
+		for(int num : numbers) { 
+			sum += num;
+		} 
+		
+		//(2.총합// 원소의 갯수 - > 평균
+		avr = (double)sum / numbers.length;
+	//	System.out.printf("%d", average);
+		return avr;
+		
+	}
+	
+	 
+	
+	
+	
 	// ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 	
 	/*
@@ -136,7 +159,22 @@ public void printNineNineTalbeFromArray(int stage) {
 	 *  x int 첫 번째 피연산자 
 	 *  y iny 두 번째 피 연산다
 	 *  
-	 * */ 
-	// ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+	 * */  
+	public int adder(int num3, int num4 ) {
+		int result = 0; 
+		
+		result = num3 + num4;
+		return result;
+		
+	}
+	// ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 
+	public int test(double a) { 
+	return (int)a - 1;
+	}
 
+	
 }
+
+
+	
+
