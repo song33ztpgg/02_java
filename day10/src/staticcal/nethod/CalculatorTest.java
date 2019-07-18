@@ -2,7 +2,7 @@ package staticcal.nethod;
 
 
 //이름
-import static staticcal.nethod.Calculator.subtract; 
+import static staticcal.nethod.Calculator.*; 
 
 public class CalculatorTest {
 
@@ -24,7 +24,7 @@ public class CalculatorTest {
 		 * */
 		
 	
-		int sum = cal.add(10,20); 
+		int sum = add(10,20); 
 		
 		System.out.println(sum);
 	
