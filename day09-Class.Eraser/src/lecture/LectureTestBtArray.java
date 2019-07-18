@@ -8,9 +8,9 @@ public class LectureTestBtArray {
 		final int MarkerTotal = 4; 
 		
 		//배열선언
-		Maker[] markers; 
+		Maker[] markers = new Maker[MarkerTotal]; ; 
 		Eraser[] erasers;
-		markers = new Maker[MarkerTotal]; 
+		//markers = new Maker[MarkerTotal]; 
 		erasers = new Eraser[EraserTotal];
 		
 //		Maker[] markers = {    (3.5, 12.0, 5.5, 5, "검정색", "왼쪽"),
