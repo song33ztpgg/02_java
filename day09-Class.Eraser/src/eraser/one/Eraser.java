@@ -28,8 +28,28 @@ public class Eraser {
 		 
 	 }
 
+//	 Eraser() {
+//			width = 0.0;
+//			height = 0.0;
+//			depth = 0.0;
+//			layer = 0;
+//			color = null;
+//		}
+//
+//		// (2) 매개변수가 있는 생성자 : 
+//		//     다섯개의 매개변수를 모두 받는다.
+//		
+//	  Eraser(double width, double height, double depth, int layer, String color) {
+//		
+//			this.width = width;
+//			this.height = height;
+//			this.depth = depth;
+//			this.layer = layer;
+//			this.color = color;
+//		}
+	 
+	 
 	  // (2) 매개변수가 있는 생성자 :
-	  //            다섯개의 매개변수를 모두 받는다.
 	Eraser(double newWidth, double newHeigth, double newDepth, int newLayer, String newColer){
 	    width = newWidth;
 	    heigth = newHeigth;

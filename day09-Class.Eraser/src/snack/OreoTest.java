@@ -23,7 +23,7 @@ public class OreoTest {
 	//1.쿠키의 상태 출력 
 				
 	for(Oreao oreao :oreaoes ) { 
-		oreaoes.print()
+		oreaoes.print();
 	}
 	//2.for를 사용하여 모든 쿠키의 크림을 바닐라로 변경 
 				
