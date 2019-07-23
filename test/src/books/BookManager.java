@@ -11,17 +11,19 @@ public class BookManager {
 //■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■	
  	
 	BookManager(){
-	    bookShelf = new BookShelf();
+	    bookShelf = new BookShelf(); 
 	}  
 	
 	BookManager(BookShelf bookShelf){
 		this.bookShelf = bookShelf;
+		
 	}
 	
 //■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■	 
 
 	public void  add(Book book) { 
 		this.bookShelf.add(book);
+		System.out.println("10.매니저 add"); ///★★★★★★★★★★★★★★★★★★★★★★★★★★
 	} 
 	
 	public void remove(Book book) { 

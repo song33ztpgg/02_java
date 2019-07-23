@@ -4,7 +4,6 @@ public class GameManager {
 
 	GameChar[] game; 
 	
-	
 	GameManager() { 
 		game = new GameChar[0];
 	} 

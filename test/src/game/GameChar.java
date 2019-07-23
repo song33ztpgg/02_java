@@ -54,5 +54,8 @@ public class GameChar {
 		this.name = name;
 	}
 	
+	public void chartest() { 
+		System.out.println("gamechar위치");
+	}
 	
 }

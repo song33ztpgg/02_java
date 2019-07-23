@@ -6,16 +6,14 @@ public class GameTest {
 		
 		GameManager game; 
 		GameChar ch;
-		game.charAdd();
-		
-		
-		
+		ch = new GameChar();
 		
 		GameChar tracer; 
 		GameChar emp;
 		tracer = new GameChar(10,20,"a"); 
 		emp = new GameChar(33,71,"n");
-			
+		
+		ch.chartest();
 			
 	}
 

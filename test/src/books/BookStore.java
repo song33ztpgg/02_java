@@ -21,7 +21,10 @@ public class BookStore {
 //■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■	 	
 	
 	public void add(Book book) { 
-		manager.add(book);
+		manager.add(book); 
+		
+		System.out.printf("스토어 북 내용 = ");
+		System.out.println(book);///★★★★★★★★★★★★★★★★★★★★★★★★★★
 	} 
 	
 	public void remove(Book book) { 

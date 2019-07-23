@@ -2,19 +2,19 @@ package books;
 
 
 public class Book{
-	
 	int sequence;
 	String isbn;
 	int price;
 	
-	
+	 
 	Book() {
-		System.out.println("Book 부분");
+		System.out.println("5.book 초기화");///★★★★★★★★★★★★★★★★★★★★★★★★★★
 	}
 	
 	Book(int sequence) {
 		this(); 
 		this.sequence = sequence;
+		System.out.println("6.book 시퀀스 초기화");///★★★★★★★★★★★★★★★★★★★★★★★★★★ 
 	}
 	
 	Book(int sequence, String isbn){ 
@@ -23,19 +23,23 @@ public class Book{
 	}
 	
 	Book(int sequence, String isbn,int price){ 
-		this(sequence,isbn); 
-		this.price = price;
-		
+		this(sequence,isbn); 	
+		this.price = price; 
+		System.out.println("7.선언자 모두 초기화");///★★★★★★★★★★★★★★★★★★★★★★★★★★
+		System.out.println(sequence); 
+		System.out.println(isbn); 
+		System.out.println(price);
 	}
 
 //■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■//
 
 	public int getSequence() {
-		return sequence; 
-		
+	
+		return sequence;  
 	}
 	
 	public void setSequence(int sequence) {
+	
 		this.sequence = sequence;
 	}
 
@@ -54,7 +58,7 @@ public class Book{
 		return price;
 	}
 	public void setPrice(int price) {
-		this.price = price;
+		this.price = price; 
 	}
 //■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■//
 //	
@@ -69,6 +73,7 @@ public class Book{
 
 	
 	public void print() {
+		
 		String message = "책 정보[일련번호:%d, ISBN:%s, 가격:%d]%n";
 		
 		System.out.printf(message, sequence, isbn, price);

@@ -8,17 +8,19 @@ public class BookShelf {
 		Book[] books;
 		
 		BookShelf() {
-			books = new Book[0]; 
+			books = new Book[0];  
 		}
 		
 		BookShelf(Book[] books) {
 			this.books = books;
+			
 		}
 		
 // ■■■■■책장에 책 추가■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■//
 
 		public void add(Book book) {
-			System.out.println("BookShelf add부분"); 
+			System.out.println("9. BookShelf add 실행"); 
+			
 			Book[] newBooks = new Book[books.length + 1];
 			
 			for (int idx = 0; idx < books.length; idx++) {
@@ -27,7 +29,8 @@ public class BookShelf {
 			
 			// 매개변수로 넘겨진 book 은 마지막 새로 생긴 칸에 저장
 			newBooks[newBooks.length - 1] = book;
-			this.books = newBooks;
+			this.books = newBooks; 
+			System.out.println("10. bookshelf 종료");
 		}
 		
 // ■■■■■■■■책장에서 책을 제거 : void■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■//
