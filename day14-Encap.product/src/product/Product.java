@@ -13,10 +13,10 @@ package product;
  * */
 public class Product {
 	// 1. 매개 변수 선언 
-	String pcode; 
-	String pname; 
-	int price; 
-	int quantity;
+	private String pcode; 
+	private String pname; 
+	private int price; 
+	private int quantity;
 	
 	
 	
@@ -82,8 +82,41 @@ public class Product {
 	
 	} 
 	
+	//수정자 메소드 선언 
+	public void setPcode(String pcode) { 
+		this.pcode = pcode;
+	}
 	
-	//
+	public void setPname(String pname) { 
+		this.pname = pname;
+	}
+	
+	public void setPrice(int price) { 
+		this.price = price;
+	}
+ 
+	public void setQuantity(int quantity) { 
+		this.quantity = quantity;
+	}
+	
+	public String getPcode() { 
+		return pcode;
+	}
+	
+	public String getPname() { 
+		return pname;
+	}
+	
+	public int getPrice() { 
+		return price;
+	}
+	
+	public int getQuantity() { 
+		return quantity;
+	}
+	
+	
+	
 	public void buy(int amount) {
 		quantity += amount; 
 		System.out.printf("%d 추가하였습니다 . 재고 : %d%n",amount , quantity);
