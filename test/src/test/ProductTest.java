@@ -2,9 +2,16 @@ package test;
 
 class ProductTest {
 
-	public static void main(String[] args) {
+	
+		
+		static int x; 
 		
 		
-	}
+		public void abc() {	
+		System.out.println(x);	
+		} 
+		
+		
+		
 
 }
