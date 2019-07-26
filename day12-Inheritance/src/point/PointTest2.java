@@ -11,7 +11,8 @@ public class PointTest2 {
 		Point[] points = {	
 							new Point(10,1)
 						  , new Point(3,4)
-						  , new NamedPoint("0",0,0)};  
+						  , new NamedPoint("0",0,0)
+						  };  
 		 
 		
 		

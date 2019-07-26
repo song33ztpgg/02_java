@@ -13,9 +13,9 @@ public class GameManager {
 	}
 	
 //■■■■■■■■■■■■■■■■■■■■■■■ 매소드 ■■■■■■■■■■■■■■■■■■■■■■■//
-	public void damage() { 
+	public void damage(GameChar game) { 
 		for(int i = 0; i < 10 ; i++) { 
-			System.out.println(game.length +i);	
+			charAdd(game);
 		}
 		
 	}

@@ -1,4 +1,4 @@
-package stringtest1
+package stringtest1;
 
 public class StringApiTest {
 
@@ -13,7 +13,7 @@ public class StringApiTest {
 		String str3 = "XYZ"; 
 		
 		
-		
+		System.out.printf();
 		System.out.println(str1.charAt(2));  // c
 		
 		//concat(String) : 문자열을 붙인 결과 리턴

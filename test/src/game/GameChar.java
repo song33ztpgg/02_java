@@ -58,4 +58,8 @@ public class GameChar {
 		System.out.println("gamechar위치");
 	}
 	
+	public void print(){ 
+		System.out.printf("hp : %d , mp : %d , name : %s", hp, mp, name);
+	}
+	
 }

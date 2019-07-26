@@ -32,7 +32,7 @@ public class PointTest {
 		System.out.println("점 q : " +q);
 		
 		//3.3 두 점 사이의 거리를 계산
-		System.out.println("두점사이의 거리 : " +p.distanceFrom(q));
+		System.out.println("두점사이의 거리 : " +p.distanceFrom(q)); 
 		
 		System.out.println("------------------------------------------");
 		//3.4 점 o 출력 

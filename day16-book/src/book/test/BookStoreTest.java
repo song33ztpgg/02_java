@@ -1,4 +1,11 @@
-package book;
+package book.test;
+
+
+
+import book.Book;
+import book.BookManager;
+import book.BookShelf;
+import book.BookStore;
 
 /**
  * 서점에서 할 수 있는 여러 기능들 
@@ -74,13 +81,11 @@ public class BookStoreTest {
 		
 		Book rmBook = new Book(5); 
 		kyobo.remove(rmBook); 
-		book.print();
-		
-		
-//		Book[] allBooks = kyobo.getAllBooks();
-//			for (Book book: allBooks) {
-//				book.print();
-//			}
+		   
+		Book[] allBooks = kyobo.getAllBooks();
+			for (Book book: allBooks) {
+				book.print();
+			}
 		
 		
 		

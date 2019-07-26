@@ -22,19 +22,20 @@ public class Book{
 		this.isbn = isbn;
 	}
 	
+	
 	Book(int sequence, String isbn,int price){ 
 		this(sequence,isbn); 	
 		this.price = price; 
 		System.out.println("7.선언자 모두 초기화");///★★★★★★★★★★★★★★★★★★★★★★★★★★
-		System.out.println(sequence); 
-		System.out.println(isbn); 
-		System.out.println(price);
+		System.out.println(sequence +" / " +isbn + "  / " +price); 
+	
 	}
 
 //■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■//
 
 	public int getSequence() {
-	
+		
+		System.out.println(num);
 		return sequence;  
 	}
 	
