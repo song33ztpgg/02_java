@@ -26,16 +26,15 @@ public class Book{
 	Book(int sequence, String isbn,int price){ 
 		this(sequence,isbn); 	
 		this.price = price; 
-		System.out.println("7.선언자 모두 초기화");///★★★★★★★★★★★★★★★★★★★★★★★★★★
+		System.out.println("7.book 만 초기화");///★★★★★★★★★★★★★★★★★★★★★★★★★★
 		System.out.println(sequence +" / " +isbn + "  / " +price); 
 	
 	}
 
 //■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■//
 
-	public int getSequence() {
-		
-		System.out.println(num);
+	public int getSequence() { 
+		System.out.println();
 		return sequence;  
 	}
 	

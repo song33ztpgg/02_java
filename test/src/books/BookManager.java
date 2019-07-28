@@ -8,15 +8,13 @@ public class BookManager {
 	
 	BookShelf bookShelf; 
 	
-//■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■	
  	
 	BookManager(){
-	    bookShelf = new BookShelf(); 
+	    bookShelf = new BookShelf();  
 	}  
 	
 	BookManager(BookShelf bookShelf){
 		this.bookShelf = bookShelf;
-		
 	}
 	
 //■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■	 

@@ -24,7 +24,7 @@ public class PrintfTest {
 		
 		int i=222; 
 		int j=100; 
-		System.out.printf("%d + %d = %d\n", i , j  );
+		System.out.printf("%d + %d = %d\n", i , j , i+j );
 		
 		System.out.printf("%d + %d = %d\n" ,i ,j ,+( i + j));
 		System.out.printf("%d * %d = %d\n" ,i ,j ,+( i * j));
@@ -45,12 +45,11 @@ public class PrintfTest {
 		
 		System.out.printf("입력한값은 %d 입니다" , +Z); 
 		
-		int scan;
-		Scanner scan1; 
-		scan = new scan1(System.in); 
+	
+		Scanner scan = new Scanner(System.in); 
 		
-		input1 = scan1.nextInt(); 
-		input1 = scan1.nextInt();
+		input1 = scan.nextInt(); 
+		input1 = scan.nextInt();
 
 		
 		

@@ -11,7 +11,7 @@ public class OreoTest {
 	public static void main(String[] args) {
 
 		
-		Oreao[] oreaoes = new Oreao[3];
+		Oreao[] oreaoes = new Oreao[4];
 		
 		oreaoes[0] =  new Oreao("바닐라",1.0, 2.0);  
 		oreaoes[1] =  new Oreao("초코",5.0, 6.0); 
@@ -23,7 +23,7 @@ public class OreoTest {
 	//1.쿠키의 상태 출력 
 				
 	for(Oreao oreao :oreaoes ) { 
-		oreaoes.print();
+		oreao.print();
 	}
 	//2.for를 사용하여 모든 쿠키의 크림을 바닐라로 변경 
 				

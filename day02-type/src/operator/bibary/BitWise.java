@@ -24,4 +24,5 @@ public class BitWise {
 //	System.out.printf("~%x  = %x\n" +a, b, ~a);
 //		 
 	
+} 
 }

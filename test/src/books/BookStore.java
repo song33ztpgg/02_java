@@ -7,8 +7,7 @@ package books;
 public class BookStore {
 	
 	BookManager manager; 
-	
-//■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■	 	 
+	 	 
 	
 	BookStore(){ 
 		manager = new BookManager();

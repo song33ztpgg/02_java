@@ -12,26 +12,39 @@ public class BookShelf {
 		}
 		
 		BookShelf(Book[] books) {
-			this.books = books;
-			
+			this.books = books; 
 		}
 		
 // ■■■■■책장에 책 추가■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■//
 
 		public void add(Book book) {
+			
 			System.out.println("9. BookShelf add 실행"); 
 			
 			Book[] newBooks = new Book[books.length + 1];
-			
 			for (int idx = 0; idx < books.length; idx++) {
 				newBooks[idx] = books[idx];
-			}
-			
-			// 매개변수로 넘겨진 book 은 마지막 새로 생긴 칸에 저장
+				}
 			newBooks[newBooks.length - 1] = book;
 			this.books = newBooks; 
+			
 			System.out.println("10. bookshelf 종료");
 		}
+		
+		
+
+//		public void add(Book 넘겨저온내용들) {
+//			
+//			Book[] 새로운배열 = new Book[books.length + 1];
+//			
+//			for (int idx = 0; idx < books.length; idx++) {
+//				새로운배열[idx] = books[idx];
+//				}
+//			
+//			새로운배열[새로운배열.length - 1] = 넘겨저온내용들;
+//			this.books = 새로운배열; 
+//			
+//		}
 		
 // ■■■■■■■■책장에서 책을 제거 : void■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■//
 	
@@ -39,33 +52,23 @@ public class BookShelf {
 	
 		// 폐기 안하고 남는 책을 유지할 새 배열
 			
-		Book[] newBooks;
-					
-					
-		int index = findBookIndex(book);
-		
+		Book[] newBooks;					
+		int index = findBookIndex(book);		
 		if(index > -1) {
-			newBooks = new Book[books.length -1]; 
-			
+			newBooks = new Book[books.length -1]; 		
 			if(index < books.length -1) { 
 				for(int idx = 0 ; idx < index ;idx++) { 
-					newBooks[idx] = books[idx];
-				}
-	
+					newBooks[idx] = books[idx];}
 				for(int idx = 0 ; idx < newBooks.length ;idx++) { 
-					newBooks[idx] = books[idx +1];
-				}
-				
-				
+					newBooks[idx] = books[idx +1];}
 			} else { 
-			
 				for(int idx = 0; idx < books.length; idx ++) 
 				newBooks[idx] = books[idx];
+			} 
+			this.books = newBooks;
 			}
-			
-						this.books = newBooks;
-					}
-				}
+		}
+		
 
 // ■■■■■■책정보 수정 (void)■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■//		
 				

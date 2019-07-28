@@ -30,7 +30,7 @@ public class BookStoreTest {
 	   Book noDaap = new Book(3, "9791190182645", "제 인생에 답이 없어요", "선바 ", "위즈덤 하우스", 192, 10800, 3);
 	   Book dduk = new Book(4, "9791196394509", "죽고 싶지만 떡볶이는 먹고 싶어", "백세희", "혼", 208, 12420, 2);
 	   Book ax = new Book(5, "9788956055466", "책은 도끼다", "박웅현", "북하우스", 348, 14400, 2);
-		
+	   
 		
 		//2 서점에 도착한 신간 입고 
 	   
@@ -74,7 +74,7 @@ public class BookStoreTest {
 		
 		Book rmBook = new Book(5); 
 		kyobo.remove(rmBook); 
-		book.print();
+		
 		
 		
 //		Book[] allBooks = kyobo.getAllBooks();
