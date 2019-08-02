@@ -78,18 +78,31 @@ public class ListTest {
 		
 		System.out.printf("list foreach 출력 : ");
 		for(Object object : list) {
+			
+			
+			//런타임 예외 상황을 방지하기 위하여 아래와 같은 코드 
+			if(object instanceof Book) {
+				((Book) object).setTitle("채식주의자"); 
+			}
+			
 			System.out.println(object); 
 		}
 		
 		System.out.printf("list for 출력 : ");
 		for(int idx = 0 ; idx < list.size() ; idx++) {
-			System.out.println(list.get(idx)); 
+//			System.out.println(idx +" : "+ list.get(idx));
+//			System.out.println(list.get(idx)); 
+			
+			
 		}
 		
 		//인덱스를 직접지정해서 추출 가능 
 		//int two = list.get(1); 
 		int two1 = (int)list.get(1);
-		int two2 = (Integer)list.get(1);
+		int two2 = (Integer)list.get(1); 
+		
+//		int two2 = (Integer)list.get(5); 
+//		코드상에 문제가 있으나 문제가 보이지 않고 실행될대 문제가 발생
 		
 		System.out.println("삭제 전 list의 크기 " +list.size()); 
 		

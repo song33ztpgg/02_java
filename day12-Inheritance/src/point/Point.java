@@ -54,7 +54,7 @@ public class Point /*extends Object*/ {
 	}
 
 	public double distanceFrom(Point q) { 
-	/*	System.out.println(q);*/
+//		System.out.println();
 		return Math.sqrt( Math.pow(q.getX() - x, 2) + Math.pow(q.getY() - y, 2) );
 		
 	}

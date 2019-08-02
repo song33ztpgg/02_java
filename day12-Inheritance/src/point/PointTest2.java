@@ -8,8 +8,7 @@ public class PointTest2 {
 		 * points 3칸 배열 가리킴 
 		 * 1칸당 Point 형식을 가짐
 		 * */
-		Point[] points = {	
-							new Point(10,1)
+		Point[] points = {	new Point(10,1)
 						  , new Point(3,4)
 						  , new NamedPoint("0",0,0)
 						  };  
@@ -38,7 +37,7 @@ public class PointTest2 {
 		//다음 점과의 거리를 구해서 출력
 		for(int idx = 0; idx < points.length -1; idx++) { 
 			System.out.printf("두점 points[%d] , points[%d] 사이의 거리 :  %.2f%n"
-								,idx,idx +1 , points[idx].distanceFrom(points[idx +1]));
+								 ,idx,idx +1 , points[idx].distanceFrom(points[idx +1]));
 		} 
 		
 		
