@@ -36,7 +36,7 @@ public class Point {
 	}
 	
 	public void sq(Point z) { 
-		System.out.println(Math.sqrt(z));
+		System.out.println(Math.abs(z);
 	}
 	
 }
