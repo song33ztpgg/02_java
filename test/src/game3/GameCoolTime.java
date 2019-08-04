@@ -19,6 +19,6 @@ public class GameCoolTime extends GM {
 	
 	public String toString() { 
 		System.out.println("test");
-		return String.format("%d %d", super.toString(), coolTime);
+		return String.format("%s %d", super.toString(), coolTime);
 	}
 }
