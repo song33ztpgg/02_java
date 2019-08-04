@@ -1,8 +1,9 @@
 package point;
 
 public class Point {
-	int x; 
-	int y; 
+	
+	private int x; 
+	private int  y; 
 	
 	public Point() { 
 		
@@ -36,7 +37,7 @@ public class Point {
 	}
 	
 	public void sq(Point z) { 
-		System.out.println(Math.abs(z);
+//		System.out.println(Math.abs(z);
 	}
 	
 }

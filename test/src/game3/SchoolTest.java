@@ -1,4 +1,8 @@
-package school;
+package game3;
+
+import school.Employee;
+import school.Teacher;
+
 /**
  * 학교시스템을 테스트 하는 클래스 
  * 

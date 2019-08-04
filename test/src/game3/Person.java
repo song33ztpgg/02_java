@@ -1,4 +1,4 @@
-package school;
+package game3;
 
 /**
  * 시스템에 저장될 학생 , 선생, 직원의 정보중 

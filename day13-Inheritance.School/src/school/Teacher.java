@@ -1,4 +1,7 @@
 package school;
+
+import game3.Person;
+
 /**
  * 학교 시스템에서 
  * 과목을 가르치는 선생의 정보를 저장하는 클래스 

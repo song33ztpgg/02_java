@@ -1,4 +1,4 @@
-package school;
+package game3;
 /**
  * 학교 시스템에서 
  * 학생의 정보를 저장하는 클래스 

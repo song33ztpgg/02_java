@@ -1,4 +1,7 @@
 package school;
+
+import game3.Person;
+
 /**
  * 하교시스템에서 교직원의 정보를 저장하는 클래스 
  * dept : String : 소속부서 이름 
@@ -33,8 +36,13 @@ public class Employee extends Person {
 	//1) toStrint () 재정의 
 	@Override
 	public String toString() { 
+
+//		String empStr = (" 부서 : " +dept);
 		String empStr = String.format(" , 부서 : %s", dept); 
-		return String.format("직원의 정보[%s%s]",super.toString(),empStr);
+		return String.format("직원의 정보[%s%s]",super.toString(),empStr); 
+ 
+		
+		
 	}
 	
 	
