@@ -28,8 +28,19 @@ public class DividerTest {
 		input = scan.nextInt(); 
 		
 		//3.사용 
-		int result = div.divide(input); 
-		System.out.printf("나눗셈 성공 %d%n", result);
+		int result = 0;
+		
+		try {
+			result = div.divide(input);
+			System.out.printf("나눗셈 성공 %d%n", result);
+			
+		} catch (DivideZeroException e) {
+			System.err.printf("나눗셈 실패 :%s%n", e);
+			e.printStackTrace();
+			
+		} catch(Exception e) { 
+			e.printStackTrace();
+		}
 		
 		System.out.println("프로그램 종료");
 		
