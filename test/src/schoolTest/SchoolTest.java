@@ -1,11 +1,8 @@
-package game3;
+package schoolTest;
 
-/**
- * 학교시스템을 테스트 하는 클래스 
- * 
- * ---------------------------- 
- * Person과 상속관계 Student, Employee, Teacher를 테스트 하는 클래스.
- * */
+import schoolTest.Employee;
+import schoolTest.Teacher;
+
 public class SchoolTest {
 
 	public static void main(String[] args) {
@@ -14,10 +11,8 @@ public class SchoolTest {
 		persons = new Person[3]; 
 				
 		persons[0] = new Student("S01","홍길동",18,"도술"); 
-
-		
-		//3. foreach를 사용하여 Persons배열의 각 엘리먼트에 대하여 
-		// print() 메소드 호출
+		persons[1] = new Teacher("T01","정약용",32,"실학");
+		persons[2] = new Employee("E01","허균",48,"문학예술"); 
 		
 		for(Person per : persons){ 
 			// 가상 메소드 호출 부모클래스 정의 매소드 호출 

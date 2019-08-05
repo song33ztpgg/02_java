@@ -1,6 +1,5 @@
 package school;
 
-import game3.Person;
 
 /**
  * 하교시스템에서 교직원의 정보를 저장하는 클래스 

@@ -33,6 +33,7 @@ public class DividerTest {
 		
 		System.out.println("프로그램 종료");
 		
+		//예외 발생시 마지막 메세지 까지 오지 못한다.
 	}
 
 }

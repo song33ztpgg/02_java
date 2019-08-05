@@ -1,4 +1,4 @@
-package game3;
+package schoolTest;
 
 
 public class Student extends Person {
@@ -20,7 +20,7 @@ public class Student extends Person {
 	
 	public String toString() { 
 		String stdStr = String .format(" , 전공 : %s" , major); 
-		return String.format("학생정보[%s%s]", super.toString(), stdStr);
+		return String.format("학생정보[ %s%s]", super.toString(), stdStr);
 	}
 	
 	

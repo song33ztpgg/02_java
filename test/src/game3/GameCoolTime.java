@@ -4,11 +4,12 @@ public class GameCoolTime extends GM {
 
 	private int coolTime; 
 	
-	public GameCoolTime() { 
+	 GameCoolTime() { 
 		
 	} 
 	
-	public GameCoolTime(int coolTime) { 
+	 GameCoolTime(int coolTime) { 
+		this();
 		this.coolTime = coolTime;
 	}
 	
@@ -18,7 +19,9 @@ public class GameCoolTime extends GM {
 	} 
 	
 	public String toString() { 
-		System.out.println("test");
-		return String.format("%s %d", super.toString(), coolTime);
-	}
+		System.out.println("coolTime");
+		return String.format("%s %d", super.toString(), coolTime); 
+	} 
+	
+
 }

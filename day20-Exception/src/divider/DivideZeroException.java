@@ -42,5 +42,5 @@ public class DivideZeroException extends Exception {
 		return this.reason;
 	}
 	
-	
+
 }

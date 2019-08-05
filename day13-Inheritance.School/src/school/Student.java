@@ -1,4 +1,4 @@
-package game3;
+package school;
 
 
 public class Student extends Person {

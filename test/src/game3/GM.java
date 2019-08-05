@@ -4,7 +4,7 @@ public abstract class GM {
 
 	private int power;  
 
-	GM() {
+	public GM() {
 		
 	} 
 	
@@ -13,6 +13,11 @@ public abstract class GM {
 		this.power = power;
 	} 
 	
+	public void print() { 
+		System.out.println(this);
+	}
 	
-	
+	public String toString() { 
+		return String.format("%s", power); 
+	} 
 }

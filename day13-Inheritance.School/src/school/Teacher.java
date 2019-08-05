@@ -1,6 +1,5 @@
 package school;
 
-import game3.Person;
 
 /**
  * 학교 시스템에서 

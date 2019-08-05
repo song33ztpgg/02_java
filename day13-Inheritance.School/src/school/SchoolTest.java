@@ -1,4 +1,7 @@
-package game3;
+package school;
+
+import school.Employee;
+import school.Teacher;
 
 /**
  * 학교시스템을 테스트 하는 클래스 
@@ -14,7 +17,17 @@ public class SchoolTest {
 		persons = new Person[3]; 
 				
 		persons[0] = new Student("S01","홍길동",18,"도술"); 
-
+		persons[1] = new Teacher("T01","정약용",32,"실학");
+		persons[2] = new Employee("E01","허균",48,"문학예술"); 
+		
+		
+		/* 
+		  Person[] persons = {   new Student("S01","홍길동",18,"도술");     
+		                       , new Teacher("T01","정약용",32,"실학");     
+		                       , new Employee("E01","허균",48,"문학예술");   
+		                                                                 
+		*/
+		
 		
 		//3. foreach를 사용하여 Persons배열의 각 엘리먼트에 대하여 
 		// print() 메소드 호출
