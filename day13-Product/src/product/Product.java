@@ -18,9 +18,7 @@ public class Product {
 	int price; 
 	int quantity;
 	
-	
-	
-	
+
 	//2. 매개변수 받는 생성자 
 	public Product() { 
 		
@@ -50,12 +48,12 @@ public class Product {
 	
 	//제품의 상태를 출력
 	public void print() {
-		System.out.printf("제품 코드 : %5s , 제품이름 : %5s , 가격 : %5d 제고 : %2d%n",pcode,pname, price, quantity);
+		System.out.printf("제품코드 : %5s , 제품이름 : %5s , 가격 : %5d 제고 : %2d%n",pcode,pname, price, quantity);
 	} 
 	
 	//toString() : String 
 	public String toString() {
-		return String.format("제품 코드 : %5s , 제품이름 : %5s , 가격 : %5d 제고 : %2d",pcode,pname, price, quantity);
+		return String.format("제품코드 : %5s , 제품이름 : %5s , 가격 : %5d 제고 : %2d",pcode,pname, price, quantity);
 	}
 
 	//입력된 값만큼  % 할인

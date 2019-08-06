@@ -36,6 +36,7 @@ public class Employee extends Person {
 	@Override
 	public String toString() { 
 
+		
 //		String empStr = (" 부서 : " +dept);
 		String empStr = String.format(" , 부서 : %s", dept); 
 		return String.format("직원의 정보[%s%s]",super.toString(),empStr); 

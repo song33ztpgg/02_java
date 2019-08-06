@@ -12,20 +12,21 @@ public class ProductTest {
 		
 		// 3. 사용
 		// (1) 제품 상태 출력 
-		System.out.printf("현재상태 : ");
+		System.out.printf("현재상태 : "); 
+		
 		product.print();
 		
 		// (2) 20% 할인가는 어떻게 되나?
 		int dcPrice = product.discount(0.2); 
 		System.out.printf("할인 : ");
-		System.out.printf("제품 가격 : %d,  20%% 할인가 : %d%n", 51330, dcPrice);
+		System.out.printf("제품가격 : %d,  20%% 할인가 : %d%n", 51330, dcPrice);
 		
 		// (3) 2개 판매(sell)
 		System.out.printf("2개판매 : ");
 		product.sell(2);
 		
 		// (4) 상태 출력
-		System.out.printf("현재 상태 : ");
+		System.out.printf("현재상태 : ");
 		product.print();
 		
 		// (5) 10개 입고(buy)
@@ -33,15 +34,11 @@ public class ProductTest {
 		product.buy(10);
 		
 		// (6) 상태 출력
-		System.out.printf("현재상태 : ");
-		product.print();
 		
 		System.out.println("==============================");
+		System.out.printf("현재상태 : ");
 		System.out.println(product);
 		System.out.println("==============================");		 
-		String name = "123456789"; 
-		
-		System.out.println(name.charAt(0));
 
 	}
 

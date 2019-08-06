@@ -1,7 +1,7 @@
 package array.basic;
 
 public class ContinueTest {
-
+	public static void main(String[] args) {
 	int sum; 
 	sum = 0;
 	for(int i = 0;i < 100 ; i++) { 
@@ -10,4 +10,5 @@ public class ContinueTest {
 			sum +=i;
 		}
 	} 
+}
 }

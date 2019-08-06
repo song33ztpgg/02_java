@@ -39,6 +39,7 @@ public class Teacher extends Person {
 	
 	@Override 
 	public String toString() { 
+		
 		String tcStr = String.format(" ,과목 : %s", subject); 
 		return  String.format("교사정보 [%s%s]", super.toString(), tcStr);
 	}

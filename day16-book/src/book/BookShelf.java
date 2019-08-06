@@ -214,8 +214,8 @@ public class BookShelf {
 		 * return true : 찾는 책이 목록에 존재 	o
 		 * 		  false : 찾는 책이 목록에 존재  x  
 		 * */
-		private boolean isExisits(Book book) { 
-			
+		private boolean isExisits(Book book) {
+			return false; 
 		}
 		
 		

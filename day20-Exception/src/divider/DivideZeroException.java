@@ -16,7 +16,7 @@ package divider;
  * 2.new로 생성 후 
  * 3.throw(던져서)[발생] 시켜야 사용 되기 시작 
  * 
- * @author Administrator
+ * @author 
  *
  */
 public class DivideZeroException extends Exception {

@@ -71,6 +71,7 @@ public abstract class Person {
 	 * */
 	@Override
 	public String toString(){ 
+		System.out.println("1111111");
 		return String.format("아이디 : %s , 이름 : %s  , 나이 : %d",id,name,age);
 	}
 	
@@ -82,7 +83,9 @@ public abstract class Person {
 	 *      		  출력할때 자동으로 작도하는 메소드 
 	 * */
 	public void print() { 
+		System.out.println("222222");
 		System.out.println(this); 
+	
 		// System.out.println(this.toString());
 	} 
 	  

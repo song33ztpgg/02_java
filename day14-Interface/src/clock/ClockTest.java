@@ -10,29 +10,26 @@ package clock;
 public class ClockTest {
 
 	public static void main(String[] args) {
+		
 		// 1.선언, 2.초기화
 		// (1) SmartWatch 추상클래스(상위클래스) 타입의 배열 선언
 		SmartWatch[] watches = new SmartWatch[2];
 		
 		// (2) 각 인덱스 위치에 GarminActive3, GalaxyGear4 인스턴스 저장
 		watches[0] = new GarminActive3();
-		watches[0].setWatchName("가민 액티브3");
-		
+		watches[0].setWatchName("가민 액티브3 -");
 		watches[1] = new GalaxyGear4();
-		watches[1].setWatchName("갤럭시 기어4");
+		watches[1].setWatchName("갤럭시 기어4 -");
 		
 		// 3. 사용
 		for (SmartWatch watch: watches) {
 			watch.displayTime();
 		}
 		
-		//////////////////////////////////////////////////
 		// 4. 인터페이스 타입의 변수선언
 		Clock myWatch; 
 		myWatch = new GarminActive3(); // 타입이 clock으로 하지 않았다. 
-		
-		
-		
+	
 		Clock yourWatch;
 		yourWatch = new GalaxyGear4();
 		
@@ -45,6 +42,7 @@ public class ClockTest {
 		for (Clock clock: clocks) {
 			clock.displayTime();
 		}
+		
 	}
 
 }

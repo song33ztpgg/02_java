@@ -6,13 +6,19 @@
  
  ctrl 누른상태로 매소드 클릭하면 매소드 위치로 이동을 한다
   
- ■  alt + shift + R  : 전체 수정
+ alt + shift + R  : 전체 수정
  
- alt + shift + s : hash 코드 만드는 매소드 만들기
+ alt + shift + s : hash 코드 만드는 매소드 만들기 
+ 
+ alt + 방향키 : 문장 이동
  
  //■■■■■■■■■■■■■■■■■■■■■■■■■키워드 사용법■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■//
  
   
+ ■ String name = "123456789"; 
+   System.out.println(name.charAt(0));
+
+
  case 다중 선택가능하게 
  => case1: (null) 
  	case2:  

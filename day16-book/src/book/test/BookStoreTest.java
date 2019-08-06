@@ -82,8 +82,8 @@ public class BookStoreTest {
 		Book rmBook = new Book(5); 
 		kyobo.remove(rmBook); 
 		   
-		Book[] allBooks = kyobo.getAllBooks();
-			for (Book book: allBooks) {
+		Book[] allBooks1 = kyobo.getAllBooks();
+			for (Book book: allBooks1) {
 				book.print();
 			}
 		
