@@ -1,5 +1,7 @@
 package time;
 
-public interface Computer {
-
+public abstract interface Computer {
+	final int price; 
+	
+	
 }
