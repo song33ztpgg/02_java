@@ -14,9 +14,8 @@ public class Test {
 		
 		for(OverWatch set : game) { 
 			set.start();
-			System.out.println("끝");
+			
 		}
-		System.out.println("끝");
 
 		//		tank.setName("sigma"); 
 		
