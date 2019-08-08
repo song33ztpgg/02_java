@@ -15,8 +15,7 @@ import book.BookStore;
 public class BookStoreTest {
 
 	public static void main(String[] args) {
- 
-		// 매니저에게 전달할 책장안에 들어갈 배열
+ 		// 매니저에게 전달할 책장안에 들어갈 배열
 		Book[] books = new Book[0];
 		
 		//2.배열로 구성되는 책장을 만든다. 

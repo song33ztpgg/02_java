@@ -1,32 +1,24 @@
 package game2;
 
-
 public class GameTest {
 
 	public static void main(String[] args) {
 
-		GameMC mc = new GameMC(); 
-		GameChar[] ch = new GameChar[3];
 		
-		GameChar pr = new GameChar();
+		GameServer attack; 
+		GameServer tank;
+		GameChar support;
 		
-		GameChar sombr; 
-		GameChar emp; 
-		GameChar hack;
-		
-		sombr = new GameChar(200,6,"sombra");
-		emp  = new GameChar(1500,6,"All hack");
-		hack = new GameChar(8,5, "sombra");
-		
-//		sombr.print(sombr);
-		
-		GameChar test = new GameChar();
+		attack = new GameServer("a"); 
+		tank = new GameServer("b"); 
+		support = new GameChar(10,20,"c");
 		
 		
-		mc.add(sombr); 
-		mc.add(emp); 
-		mc.add(hack);		
-				
+		GameServer test = new GameServer(); 
+		
+		System.out.println(attack); 
+		System.out.println(tank); 
+		System.out.println(support);
 		
 
 	}

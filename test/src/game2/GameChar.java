@@ -1,55 +1,23 @@
 package game2;
 
-public class GameChar {
-
+public class GameChar extends GameServer{
+	
 	int hp; 
 	int mp; 
-	String name;
 	
-	public GameChar() { 
-		
+	public GameChar(String name) { 
+		super();
 	} 
 	
-	public GameChar(int hp,int mp, String name) { 
-		this(); 
+	public GameChar(int hp , int mp,String name) { 
+		super(name); 
 		this.hp = hp; 
-		this.mp = mp; 
-		this.name = name;
+		this.mp = mp;
 	} 
 	
-	public void hp() { 
-		
-	} 
-	
-	public int hp(int hp){
-		return hp;
-	} 
-	
-	public void mp() { 
-		
-	} 
-	
-	public int mp(int mp){
-		return mp;
+	public String toString() { 
+		return String.format("hp : %d  / mp : %d", hp , mp) + super.toString(); 
+//		String.format("%d %d", hp , mp);
 	}
-	
-	public void name() { 
-		
-	} 
-	
-	public String name(String name){
-		return name;
-	}
-	
-	
-	public void allChater() {
-		System.out.printf("%s %d   %d  \n",name, hp ,mp ); 
-	}
-	
-	
-	public void print(GameChar game) { 
-		System.out.printf("%d   %d   %s\n",hp ,mp ,name); 
-	}
-	
 	
 }
