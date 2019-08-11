@@ -32,7 +32,7 @@ public class Tokenizer {
 		} 
 		System.out.println();
 		System.out.println("!기준으로 나누기");
-		token = new StringTokenizer("안녕하세요, ! 기준으로 나눌거에요","!"); 
+		token = new StringTokenizer("안녕하세요,! 기준으로! 나눌거에요","!"); 
 		
 		for(;token.hasMoreTokens();) { 
 			System.out.println(token.nextToken());

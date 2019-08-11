@@ -6,6 +6,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import book.exception.DuplicateException;
+import book.exception.NotFoundException;
+import book.vo.Book;
+
 /**
  * Map 구조로 구현된 책장 클래스
  * 
@@ -32,50 +36,58 @@ public class MapBookShelf implements BookShelf {
 	}
 	
 	@Override
-	public int add(Book book) {
+	public int add(Book book) throws DuplicateException {
 		int addCnt = 0;
 		
 		// 키가 존재하지 않는 경우만 신규 추가
 		if (!isExists(book)) {
 			books.put(book.getSequence(), book);
 			addCnt++;
+		} else {
+			throw new DuplicateException("add", book);
 		}
 		
 		return addCnt;
 	}
 
 	@Override
-	public int set(Book book) {
+	public int set(Book book) throws NotFoundException {
 		int setCnt = 0;
 		
 		// 수정할 책의 키가 존재하는 경우만
 		if (isExists(book)) {
 			books.put(book.getSequence(), book);
 			setCnt++;
+		} else {
+			throw new NotFoundException("set", book);
 		}
 		
 		return setCnt;
 	}
 
 	@Override
-	public int remove(Book book) {
+	public int remove(Book book) throws NotFoundException {
 		int rmCnt = 0;
 		
 		// 수정할 책의 키가 존재하는 경우만
 		if (isExists(book)) {
 			books.remove(book.getSequence());
 			rmCnt++;
+		} else {
+			throw new NotFoundException("remove", book);
 		}
 		
 		return rmCnt;
 	}
 
 	@Override
-	public Book get(Book book) {
+	public Book get(Book book) throws NotFoundException {
 		Book found = null;
 		
 		if (isExists(book))	{
 			found = books.get(book.getSequence());
+		} else {
+			throw new NotFoundException("get", book);
 		}
 		
 		return found;
@@ -111,6 +123,18 @@ public class MapBookShelf implements BookShelf {
 	 */
 	private boolean isExists(Book book) {
 		return books.containsKey(book.getSequence());
+	}
+
+	@Override
+	public List<Book> getBooksByTitle(String title) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Book> getBooksByPrice(int min, int max) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

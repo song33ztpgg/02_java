@@ -45,11 +45,16 @@ package api.collection;
  * 
  * 만약 멤버변수 필드가 boolean 타입이라면 getter의 이름은
  * get으로 시작하지 않고 is로 시작한다.
- * =========================================================== 
- * 1.캡슐화 적용 : 맴버변수 private , 생성자ㅡ 메소드 public 
- * 2.매소드 재정의 : toString(), equals() & hashCode() 재정의 => sequance 필드 기준 재정의
- * 3.매소드 수정 : print() 메소드는 this 객체
-+ * 
+ * ==================================================
+ * 1. 캡슐화 적용 : 멤버변수는 private
+ *                  생성자, 메소드는 public
+ *                  
+ * 2. 메소드 재정의 : toString(), 
+ *                    equals() & hashCode() 재정의
+ *                    ==> sequence 필드 기준 재정의  
+ *                    
+ * 3. 메소드 수정 : print() 메소드는 this 객체 출력코드로 변경                                     
+ * ==================================================
  * @author 304
  *
  */
@@ -64,6 +69,7 @@ public class Book {
 	private int quantity;
 	
 	public Book() {
+		
 		
 	}
 	
@@ -82,42 +88,19 @@ public class Book {
 		this.title = title;
 	}
 	
-	public Book(int sequence, String isbn, String title,String author) {
-		this(sequence,  isbn,  title);
+	public Book(int sequence, String isbn, String title, String author, String company, int totalPage, int price,
+			int quantity) {
+		super();
+		this.sequence = sequence;
+		this.isbn = isbn;
+		this.title = title;
 		this.author = author;
-	}
-	
-	
-	public Book(int sequence, String isbn, String title,String author,String company) {
-		this(sequence,  isbn,  title,author);
 		this.company = company;
-	}
-	
-	
-	public Book(int sequence, String isbn, String title,String author,String company,int totalPage) {
-		this(sequence,  isbn,  title,author, company);
 		this.totalPage = totalPage;
-	}
-	
-	public Book(int sequence, String isbn, String title,String author,String company,int totalPage,int price) {
-		this(sequence,  isbn,  title,author, company, totalPage);
 		this.price = price;
-	}
-	
-
-	
-	public Book(int sequence, String isbn, String title,String author,String company,int totalPage,int price,int quantity) {
-		this(sequence,  isbn,  title,author, company, totalPage, price);
 		this.quantity = quantity;
 	}
-	
 
-	
-	
-	
-	
-	
-	////////////
 	// sequence 멤버 변수의 getter
 	public int getSequence() {
 		return sequence;
@@ -127,7 +110,6 @@ public class Book {
 	public void setSequence(int sequence) {
 		this.sequence = sequence;
 	}
-	////////////
 	
 	// isbn멤버변수 필드에 대한 getter
 	public String getIsbn() {
@@ -139,7 +121,6 @@ public class Book {
 		this.isbn = isbn;
 	}
 
-	////////////
 	public String getTitle() {
 		return title;
 	}
@@ -148,7 +129,6 @@ public class Book {
 		this.title = title;
 	}
 
-	////////////
 	public String getAuthor() {
 		return author;
 	}
@@ -157,7 +137,6 @@ public class Book {
 		this.author = author;
 	}
 
-	////////////
 	public String getCompany() {
 		return company;
 	}
@@ -166,7 +145,6 @@ public class Book {
 		this.company = company;
 	}
 
-	////////////
 	public int getTotalPage() {
 		return totalPage;
 	}
@@ -175,10 +153,6 @@ public class Book {
 		this.totalPage = totalPage;
 	}
 
-	
-	
-	
-	/////////////
 	public int getPrice() {
 		return price;
 	}
@@ -187,9 +161,6 @@ public class Book {
 		this.price = price;
 	}
 
-	
-	////////////
-	
 	public int getQuantity() {
 		return quantity;
 	}
@@ -197,38 +168,42 @@ public class Book {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
+
+	public void print() {
+		System.out.println(this);
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + sequence;
+		return result;
+	}
 	
-	public void print() { 
-		String message = "책 정보[일련번호 : %d , ISBN: %s , 재목 %s , 저자 :%5s, 출판사 %5s ,페이지 %3d, 가격: %4d 재고 %2d \n";
-				//sequence,isbn,title,author,company,totalPage,price,quantity;
-				
-		System.out.printf(message,sequence,isbn,title,author,company,totalPage,price,quantity);
-	
-	} 
-	
-	public void print(){ 
-		System.out.println(this); 
-	} 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Book other = (Book) obj;
+		if (sequence != other.sequence)
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		String message = "【책 정보[일련번호:%d, ISBN:%s"
+	             + ", 제목:%s, 저자:%s"
+	             + "\n, 출판사:%s, 페이지:%d"
+	             + ", 가격:%d, 재고:%d]】";
+		
+		return String.format(message, sequence, isbn, title, author, company, totalPage, price, quantity);
+	}
 	
 	
 	

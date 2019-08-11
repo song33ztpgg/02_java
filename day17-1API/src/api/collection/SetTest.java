@@ -36,19 +36,33 @@ public class SetTest {
 		//	  add(object) 메소드 : Collection 인터페이스에서 
 		//						   물려방은 추상 메소드가 
 		// 							HashSet클래스에서 구현됙 것 사용 
-		System.out.println(set.add("1st Item"));
+		System.out.println("set.add(문자1) :"+set.add("1st Item"));
+		
 		//동일 테이터 저장시도
-		System.out.println(set.add("1st Item"));
+		System.out.println("set.add(문자1) :"+set.add("1st Item"));
+		
 		//autoBoxing일어나고 있음
-		System.out.println(set.add(2)); 
+		System.out.println("set.add(2) :"+set.add(2)); 
+		
 		//double 타입의 포장객체
-		System.out.println(set.add(new Double("3.0")));
+		System.out.println("set.add(new Double(3.0)) :" +set.add(new Double("3.0")));
+		
 		//boolean 타입의 포장객체
-		System.out.println(set.add(new Boolean(true))); 
-
+		System.out.println("set.add(new Boolean(true) :"+set.add(new Boolean(true))); 
+	
 		Book vegetrian = new Book(1, "9788936433598", "채식주의자", "한강", "창비", 247, 10000, 10); 
-		System.out.println(set.add(vegetrian)); 
+		System.out.println("set.add(vegetrain) :"+set.add(vegetrian)); 
 		Book book = new Book(1); 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+//		System.out.println("set.add(book) :"+set.add(book));
 		//vegitatrian 과seq가 같은 새 객체 book을 넣도록 추가
 		//실행결과 false 인 이유 : Book 타입은 seq만 같으면 같은 객체로 판단하도록 
 		// equals(), hashcode()를 재정의 했으므로 

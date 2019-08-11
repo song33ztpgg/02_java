@@ -16,12 +16,16 @@ public class PointTest {
 		Point[] points = new Point[2];
 		
 		//2.초기회 
-		p = new Point(0, 0);
+		p = new Point(1, 2);
 		q = new Point(3, 4); 
 		o = new NamedPoint("o",0,0); // 특별하게 이름을 지었음 
 		
 		points[0] = new Point(0,0);
 		points[1] = new Point(3,4); 
+		
+		System.out.println("get p.getY : " +p.getY()); 
+		Point test = new Point();
+		System.out.println("p.x 는 " +p.x); 
 		
 		//3.사용 
 		
@@ -42,7 +46,7 @@ public class PointTest {
 		
 		
 		//3.5 이름이 붙은 원점과 점 q의 거리 계산 
-		System.out.printf("원범과 점q의 거리 : %f%n" , o.distanceFrom(q));
+		System.out.printf("원범과 점q의 거리 : %.1f%n" , o.distanceFrom(q));
 		
 	}
 

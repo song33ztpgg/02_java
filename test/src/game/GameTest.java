@@ -3,27 +3,32 @@ package game;
 public class GameTest {
 
 	public static void main(String[] args) {
+
+		GameCCC[] game = new GameCCC[2]; 
+		game[0] = new GameChar1(); 
+		game[0].setName("test"); 
+		game[0].setHp(10); 
+		game[1] = new GameChar2(); 
+		game[1].setName("테스트"); 
+		game[1].setHp(200); 
 		
-		GameServer tank = new GameServer(); 
-		GameServer support; 
+		System.out.println("1번째");
+		for(GameCCC play : game) { 
+			play.print();
+		} 
+		
+		GameManager test1 = new GameChar1(); 
+		GameManager test2 = new GameChar2();
+		GameManager[] test = new GameManager[2];
+		
+		test[0] = test1; 
+		test[1] = test2;
 		
 		
-		tank.setHp(400); 
-		tank.setMp(1); 
-		tank.setName ("sigma"); 
-		tank.setCoolTime(100);
-		
-		
-//		tank = new GameServer(400, 1, "sigma", 13.5); 
-//		support = new GameServer(200, 2, "mercy", 15.0); 
-		
-		
-		
-		
-		tank.print(); 
-//		support.print(); 
-		
-		tank.sell(10); 
+		System.out.println("2번째");
+		for(GameManager play : test) { 
+			play.test();
+		} 
 		
 		
 		

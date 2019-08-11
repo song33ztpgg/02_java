@@ -1,10 +1,13 @@
 package book.dao;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
+import book.exception.DuplicateException;
+import book.exception.NotFoundException;
+import book.vo.Book;
 
 /**
  * Set 으로 만들어진 책장 구현 클래스
@@ -30,18 +33,20 @@ public class SetBookShelf implements BookShelf {
 	}
 	
 	@Override
-	public int add(Book book) {
+	public int add(Book book) throws DuplicateException {
 		int addCnt = 0;
 		
 		if (books.add(book)) {
 			addCnt++;
+		} else {
+			throw new DuplicateException("add", book);
 		}
 		
 		return addCnt;
 	}
 
 	@Override
-	public int set(Book book) {
+	public int set(Book book) throws NotFoundException {
 		/*
 		 * Set 구조에서 
 		 * set:데이터 수정 은
@@ -52,34 +57,41 @@ public class SetBookShelf implements BookShelf {
 		if (books.remove(book)) {
 			books.add(book);
 			setCnt++;
+		} else {
+			throw new NotFoundException("set", book);
 		}
 		
 		return setCnt;
 	}
 
 	@Override
-	public int remove(Book book) {
+	public int remove(Book book) throws NotFoundException {
 		int rmCnt = 0;
 		
 		if (books.remove(book)) {
 			rmCnt++;
+		} else {
+			throw new NotFoundException("remove", book);
 		}
 		
 		return rmCnt;
 	}
 
 	@Override
-	public Book get(Book book) {
-		Book findBook = null;
+	public Book get(Book book) throws NotFoundException {
+		Book found = null;
 
 		for (Book inBook: books) {
 			if (inBook.equals(book)) {
-				findBook = inBook;
+				found = inBook;
 				break;
-			}
+			} 
 		}
 		
-		return findBook;
+		if (found == null)	
+			throw new NotFoundException("get", book);
+		
+		return found;
 	}
 
 	@Override
@@ -95,6 +107,18 @@ public class SetBookShelf implements BookShelf {
 //		}
 		
 		return bookList;
+	}
+
+	@Override
+	public List<Book> getBooksByTitle(String title) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Book> getBooksByPrice(int min, int max) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

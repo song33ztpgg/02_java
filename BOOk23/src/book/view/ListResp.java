@@ -2,7 +2,7 @@ package book.view;
 
 import java.util.List;
 
-import book.Book;
+import book.vo.Book;
 
 public class ListResp implements Response {
 

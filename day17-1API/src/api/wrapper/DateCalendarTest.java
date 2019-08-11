@@ -9,7 +9,7 @@ public class DateCalendarTest {
 
 	public static void main(String[] args) {
 
-		System.out.println(new (2019-1900, 8, 1));
+		System.out.println(new Calendar(2019-1900, 8, 1));
 		Calendar = Calendar.getInstance(); 
 		System.out.println(Calendar.get(Calendar, YEAR) + "년"  + 
 						   Calendar.get(Calendar, MONTH) + "월" +

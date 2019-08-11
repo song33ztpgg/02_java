@@ -9,15 +9,18 @@ public class Test {
 		OverWatch[] game = new OverWatch[2];   
 		
 		game[0] = new GameChar(); 
-		game[0].sethp(10);
-		game[0].setName("sigma"); 
+		game[0].sethp(100);
+		game[0].setName("sigma");   
+		game[1] = new GameChar2(); 
+		game[1].setName("dva"); 
+		game[1].sethp(600); 
+		
+		
 		
 		for(OverWatch set : game) { 
 			set.start();
-			
 		}
 
-		//		tank.setName("sigma"); 
 		
 	}
 

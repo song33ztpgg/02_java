@@ -6,8 +6,8 @@ package point;
 public class Point /*extends Object*/ { 
 	
 	//1. 맴버변수 
-	int x; 
-	private int y;
+	int x =10; 
+	private int y=10;
 	
 //	public int x; 
 //	int y;

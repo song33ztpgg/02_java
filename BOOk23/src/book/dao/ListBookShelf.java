@@ -5,6 +5,7 @@ import java.util.List;
 
 import book.exception.DuplicateException;
 import book.exception.NotFoundException;
+import book.vo.Book;
 
 public class ListBookShelf implements BookShelf {
 
@@ -128,5 +129,17 @@ public class ListBookShelf implements BookShelf {
 		}
 		
 		return index;
+	}
+
+	@Override
+	public List<Book> getBooksByTitle(String title) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Book> getBooksByPrice(int min, int max) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

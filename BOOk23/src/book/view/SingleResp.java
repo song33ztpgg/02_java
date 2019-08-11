@@ -1,6 +1,6 @@
 package book.view;
 
-import book.Book;
+import book.vo.Book;
 
 public class SingleResp implements Response {
 

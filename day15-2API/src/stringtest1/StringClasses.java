@@ -14,12 +14,12 @@ public class StringClasses {
 	public static void main(String[] args) {
 
 		//1.선언 
-		String str = new String("안녕하세요"); 
-		StringBuilder builder = new StringBuilder("안녕하세요"); 
+		String str = new String("안녕하세요"); 						
+		StringBuilder builder = new StringBuilder("안녕하세요"); 	
 		
 		//3.초기화 
-		System.out.println("변경전"); 
-		
+		System.out.println("변경전"); 								/**안녕하세요*/
+		                                                            /**안녕하세요*/
 		//3.1 초기화 직후 내용출력 
 		System.out.println("str :" +str); 
 		System.out.println("builder :"  +builder); 
@@ -39,7 +39,7 @@ public class StringClasses {
 		System.out.printf("String의 str     :");
 		System.out.println(str.getClass().getName() +"@" +Integer.toHexString(str.hashCode())); 
 		
-		System.out.printf("builder의 hash    :"); 
+		System.out.printf("builder의 hash    :");
 		System.out.println(builder.getClass().getName() +"@" +Integer.toHexString(builder.hashCode()));
 		
 	}

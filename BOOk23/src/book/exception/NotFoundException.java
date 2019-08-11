@@ -1,6 +1,6 @@
 package book.exception;
 
-import book.Book;
+import book.vo.Book;
 
 /**
  * 도서에 대하여

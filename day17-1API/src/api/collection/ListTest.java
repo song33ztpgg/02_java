@@ -47,39 +47,47 @@ public class ListTest {
 		
 		//3.사용 
 		//3.1 리스트에 아이템 추가 : Collection의 add(object) 메소드 사용 
-		System.out.println(list.add("첫번째 엘리먼트"));
-
+		System.out.println("1】 list.add(첫번째 엘리) :" +list.add("첫번째 엘리먼트"));
+		
 		// auto -boxing
-		System.out.println(list.add(2));
+		System.out.println("2】 list.add(2) : " +list.add(2));
 		
 		//Double 타입의 테이터 
-		System.out.println(list.add(new Double(3.00))); 
+		System.out.println("3】 list.add(new Double(3.00)) : " +list.add(new Double(3.00))); 
 		
-		System.out.println(list.add(new Boolean(true)));
+		System.out.println("4】 list.add(new Boolean(true) : " +list.add(new Boolean(true)));
 		
-		System.out.println(list.add(new Boolean(true))); 
+		System.out.println("5】 list.add(new Boolean(true)) : " +list.add(new Boolean(true))); 
 		
-		System.out.println(true);
+		System.out.println("6】 true : " +true);
 		
-		Book vegetrian = new Book(1, "9788936433598", "채식주의자", "한강", "창비", 247, 10000, 10); 
-		
+		Book vegetrian = new Book(111111, "9788936433598", "채식주의자", "한강", "창비", 247, 10000, 10); 
 		Book book = new Book(1); 
+		
+		
+		
+		
+		
+		
+		
+		System.out.println("================================");
 		//seq 가 같은 Book 객체 추가 시도
-		System.out.println(list.add(vegetrian));
-		System.out.println("= 중복데이터 추가 시도");
-		System.out.println(list.add(book));
+		System.out.println("7】 list.add(vegetrian)) : " +list.add(vegetrian));
+		
+		
+		System.out.println("\n===중복데이터 추가 시도 ===");
+		System.out.println("8】 list.add(book) : " +list.add(book));
 		
 		//Set 에는 들어가지 않던 동일 데이터 추가
-		System.out.println(list.add("첫번째 엘리먼트")); 
+		System.out.println("9】 list.add(첫번째 엘리먼트)) :" +list.add("첫번째 엘리먼트\n")); 
 		
 		//List출력 : toString() ArrayList클래스에서 재정된것이 작동 
-		System.out.printf("list 직접출력 : ");
-		System.out.println(list); 
+		System.out.println("\n10】 list 직접출력 : ");
+		System.out.println("list : " +list); 
 		
-		System.out.printf("list foreach 출력 : ");
-		for(Object object : list) {
-			
-			
+		System.out.printf("\n11】 list foreach 출력 : \n");
+		
+		for(Object object : list) {	
 			//런타임 예외 상황을 방지하기 위하여 아래와 같은 코드 
 			if(object instanceof Book) {
 				((Book) object).setTitle("채식주의자"); 

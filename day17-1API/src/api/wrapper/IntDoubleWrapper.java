@@ -27,21 +27,21 @@ public class IntDoubleWrapper {
 //		String dbFrm = String.format("문자열[%s] ==> 기본형[%d] \n", intInput,Double.parseDouble(dbInput));
 		
 		String intFrm = String.format("문자열[%s] ==> 기본형[%d] ", intInput,Integer.parseInt(intInput)); 
-		String dbFrm = String.format("문자열[%s] ==> 기본형[%f] ", intInput,parseDouble(dbInput));
+		String dbFrm = String.format("문자열[%s] ==> 기본형[%.1f] ", intInput,parseDouble(dbInput));
 		
 		System.out.println(intFrm); 
 		System.out.println(dbFrm); 
-		System.out.println(" ");
+		System.out.println();
 		
 		//2.3 typeValue() 메소드 사용 : non - static 메소드 인스턴스 생성 후 사용 
 		
 		
 //		intFrm = String.format("문자열[%s] ==> 기본형(int)[%d] \n", intInput,new Integer.parseInt(intInput)); 
-		dbFrm = String.format("문자열[%s] ==> 기본형(double)[%f] \n", dbInput,new Double(dbInput).doubleValue());
+		dbFrm = String.format("문자열[%s] ==> 기본형(double)[%.1f] \n", dbInput,new Double(dbInput).doubleValue());
 		
 		System.out.println(intFrm); 
 		System.out.println(dbFrm); 
-		System.out.println(" ");
+		System.out.println();
 		
 		//=================================================================================== 
 		
