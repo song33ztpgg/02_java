@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <!--  mybatis 에서 SQL 구문이 직성되는 문서 -->
+  <!--  mapper 파일의 namespace 이름 규칙
+        : XxxMapper  -->
+  <mapper namespace="book.mapper.BookMapper">
+    <select id="isExist" parameterType="Book" 
+                         resultType="Book">
+        SELECT b.sequence 
+         FROM BOOK b   
+        WHERE b.sequence = #{sequence}
+    </select>
+    
+    <select id="getAllBooks" resultType="Book">
+        SELECT b.sequence
+		     , b.isbn
+		     , b.title
+		     , b.author
+		     , b.company
+		     , b.total_page
+		     , b.price
+		     , b.quantity
+		     , b.reg_date
+		     , b.mod_date
+		  FROM BOOK b
+    </select>
+  </mapper>
