@@ -43,13 +43,13 @@ public class BookStore {
 	}
 	
 	//3-4.서점에 온 고객이 책을 찾을때 매니저에게 찾아달라고 부탁함
-	public Book get(Book book) { 
-		return manager.get(book);
+	public void get(Book book) { 
+		 manager.get(book);
 	} 
 	
 	//3-5.우리 서점에 판매하는 모든 책 목록을 조회 
-	public Book[] getAllBooks() { 
-		return manager.getAllBooks();
+	public void getAllBooks() { 
+		 manager.getAllBooks();
 	}
 	
 	

@@ -198,13 +198,15 @@ public class Book {
 		this.quantity = quantity;
 	}
 	
-//	public void print() { 
-//		String message = "책 정보[일련번호 : %d , ISBN: %s , 재목 %s , 저자 :%5s, 출판사 %5s ,페이지 %3d, 가격: %4d 재고 %2d \n";
-//				//sequence,isbn,title,author,company,totalPage,price,quantity;
-//				
-//		System.out.printf(message,sequence,isbn,title,author,company,totalPage,price,quantity);
-//	
-//	} 
+	@Override
+	public String toString() {
+		String message = "책 정보[일련번호:%d, ISBN:%s"
+	             + ", 제목:%s, 저자:%s"
+	             + ", 출판사:%s, 페이지:%d"
+	             + ", 가격:%d, 재고:%d]";
+		
+		return String.format(message, sequence, isbn, title, author, company, totalPage, price, quantity);
+	} 
 	
 	public void print(){ 
 		System.out.println(this); 

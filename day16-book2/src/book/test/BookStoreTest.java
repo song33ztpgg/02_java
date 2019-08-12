@@ -72,13 +72,11 @@ public class BookStoreTest {
 		// (2) 변경된 책 정보를 담은 책 객체를 넘겨서 수정처리
 		kyobo.set(vegetarian2);
 		
-		// 5. 채식주의 가격 할인 적용 결과 확인:ㅠ
+		// 5. 채식주의 가격 할인 적용 결과 확인:
 		System.out.println(" 5. ===== 채식주의자 변경 확인 =====");
 		// (1) 해당 책의 시퀀스 번호만 알면 조회가능
 		//     시퀀스 번호만 들어있는 Book 객체를 생성
 		Book seqBook = new Book(1);
-		Book findBook = kyobo.get(seqBook);
-		findBook.print();
 		kyobo.get(seqBook);
 
 		// 6. 책은 도끼다 폐기:remove

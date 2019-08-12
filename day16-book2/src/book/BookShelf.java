@@ -75,7 +75,7 @@ public class BookShelf {
 	 */
 	
 	
-	public void remove(Book book){
+	
 	
 		public int remove(Book book) {
 		// book 객체의 sequence 가 같으면 같은 책으로 판단해서
@@ -84,11 +84,12 @@ public class BookShelf {
 		int rmCnt = 0;		
 		Book[] newBooks;
 
-		// 1. 폐기할 책이 위치하는 인덱스를 찾기
-		int index = findBookIndex(book);
-
 		// 2. 폐기할 책의 인덱스가 -1보다 크면
 		//    폐기할 책이 있다는 의미로 판단하고 삭제로직 진입
+		
+		// 1. 폐기할 책이 위치하는 인덱스를 찾기
+		int index = findBookIndex(book);
+		
 		
 		if (index > -1) {
 			// 3. 폐기 안할 책을 유지할 
@@ -99,21 +100,25 @@ public class BookShelf {
 			for (int idx = 0; idx < index; idx++) {
 				newBooks[idx] = books[idx];
 			}
+			
+			
 		// 삭제할 책이 존재하면
-		if (isExists(book)) {
+			if (isExists(book)) {
 
-			//  (2) 삭제할 책 뒤쪽의 남는 책정보는 현재 인덱스 - 1 위치로 복사
-			for (int idx = index; idx < newBooks.length; idx++) {
-				newBooks[idx] = books[idx + 1];
-			}
-			// 1. 폐기할 책이 위치하는 인덱스를 찾기
-			int index = findBookIndex(book);
+				// 1. 폐기할 책이 위치하는 인덱스를 찾기
+				index = findBookIndex(book);
+			
+				//  (2) 삭제할 책 뒤쪽의 남는 책정보는 현재 인덱스 - 1 위치로 복사
+				for (int idx = index; idx < newBooks.length; idx++) {
+					newBooks[idx] = books[idx + 1];
+				}
 
-			// 6. 남는 책이 복사된 새 배열을
-			//    this.book 에 새로 저장
+				// 6. 남는 책이 복사된 새 배열을
+				//    this.book 에 새로 저장
 			this.books = newBooks;
-
-		} // end outer if
+		} 
+			
+			// end outer if
 			// 2. 폐기할 책의 인덱스가 -1보다 크면
 			//    폐기할 책이 있다는 의미로 판단하고 삭제로직 진입
 			if (index > -1) {
@@ -137,10 +142,10 @@ public class BookShelf {
 				rmCnt++;
 			} // end outer if
 		}
-
 		return rmCnt;
 	}
 
+		
 	// 책 정보 수정 : void : set(Book book)
 	/**
 	 * 수정하기 전에 수정할 book 객체가
@@ -150,24 +155,29 @@ public class BookShelf {
 	 * true 이면 수정하고 1리턴
 	 * false 이면 수정진행하지 않고 0리턴
 	 * @param book
+	 * @return 
 	 */
-	public void set(Book book) {
-		// 수정할 book 이 books 배열 
-		// 몇번째 인덱스에 있는지 찾는다.
-		int index = findBookIndex(book);
-
-		if (index > -1) {
-			books[index] = book;
-	public int set(Book book) {
-		int setCnt = 0;
-		if (isExists(book)) {
-			// 수정할 book 이 books 배열 
-			// 몇번째 인덱스에 있는지 찾는다.
-			books[findBookIndex(book)] = book;
-			setCnt++;
+		public int set(Book book) {
+			int setCnt = 0;
+			if (isExists(book)) {
+				// 수정할 book 이 books 배열 
+				// 몇번째 인덱스에 있는지 찾는다.
+				books[findBookIndex(book)] = book;
+				setCnt++;
+			}
+			return setCnt;
 		}
-		return setCnt;
-	}
+	
+//	public int set(Book book) {
+//		int setCnt = 0;
+//		if (isExists(book)) {
+//			// 수정할 book 이 books 배열 
+//			// 몇번째 인덱스에 있는지 찾는다.
+//			books[findBookIndex(book)] = book;
+//			setCnt++;
+//		}
+//		return setCnt;
+//	}
 
 	// 책 한권 얻기 : Book : get(Book book)
 	public Book get(Book book) {
@@ -235,6 +245,7 @@ public class BookShelf {
 		}
 		return index;
 	}
+	
 	/**
 	 * 매개변수로 전달된 book(책)이 
 	 * 목록(배열)에 존재하는지 여부를 검색해서
