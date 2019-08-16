@@ -19,7 +19,6 @@ public class Student extends Person {
 	} 
 	
 	public String toString() { 
-		System.out.println("3333333");
 		String stdStr = String .format(" , 전공 : %s" , major); 
 		return String.format("학생정보[%s%s]", super.toString(), stdStr);
 	}

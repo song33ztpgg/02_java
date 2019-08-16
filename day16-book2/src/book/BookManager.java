@@ -44,6 +44,7 @@ public class BookManager {
 	
 	// (2) 매개변수 생성자 작성
 	public BookManager(BookShelf bookShelf) {
+		this();
 		this.bookShelf = bookShelf;
 	}
 	
@@ -55,7 +56,7 @@ public class BookManager {
 		
 		String message;
 		response = new MessageResp();
-		
+
 		if (addCnt > 0) {
 			message = String.format(book.toString() 
 							+ "%d 건이 추가되었습니다.", addCnt);
@@ -98,8 +99,8 @@ public class BookManager {
 
 	// (3) 매니저는 책장에서 찾아달라고 고객이 요청한
 	//     책 한개를 가지고 올 수 있다.
-	public Book get(Book book) {
-		return this.bookShelf.get(book);
+	
+	
 	/**
 	 * 매니저는 책장에서 찾아달라고 고객이 요청한
 	 * 책 한개를 가지고 올 수 있다.
@@ -150,18 +151,19 @@ public class BookManager {
 	 * 처리할 수 있는 MessageResp 타입으로 생성하여 사용하면 된다.
 	 * @param book
 	 */
-	public void set(Book book) {
-		this.bookShelf.set(book);
+	public void set(Book book){
+		
 		int setCnt = this.bookShelf.set(book);
-
+		
 		String message;
 		response = new MessageResp(); 
 		if (setCnt > 0) {
-			message = String.format(book.toString() + " %d 건을 수정하였습니다.", setCnt);
+			message = String.format(book.toString() 
+					+ " %d 건을 수정하였습니다.", setCnt);
 		} else {
 			message = "수정하려는 도서가 존재하지 않습니다.";
 		}
-
+		
 		response.response(message);
 	}
 

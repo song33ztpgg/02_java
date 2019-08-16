@@ -36,16 +36,23 @@ public class SetTest {
 		//	  add(object) 메소드 : Collection 인터페이스에서 
 		//						   물려방은 추상 메소드가 
 		// 							HashSet클래스에서 구현됙 것 사용 
-		System.out.println("set.add(문자1) :"+set.add("1st Item"));
+		System.out.println("set.add(문자1) :"+set.add("1stItem"));
+		System.out.println("set =" +set + "\n");
 		
 		//동일 테이터 저장시도
-		System.out.println("set.add(문자1) :"+set.add("1st Item"));
+		System.out.println("(2) 동일 테이터 저장시도");
+		System.out.println("set.add(문자1) :"+set.add("1stItem"));
+		System.out.println("set =" +set + "\n");
 		
 		//autoBoxing일어나고 있음
+		System.out.println("(3) autoBoxing일어나고 있음");
 		System.out.println("set.add(2) :"+set.add(2)); 
+		System.out.println("set =" +set + "\n");
 		
 		//double 타입의 포장객체
+		System.out.println("(4) double 타입의 포장객체");
 		System.out.println("set.add(new Double(3.0)) :" +set.add(new Double("3.0")));
+		System.out.println("set =" +set + "\n");
 		
 		//boolean 타입의 포장객체
 		System.out.println("set.add(new Boolean(true) :"+set.add(new Boolean(true))); 
@@ -54,13 +61,7 @@ public class SetTest {
 		System.out.println("set.add(vegetrain) :"+set.add(vegetrian)); 
 		Book book = new Book(1); 
 		
-		
-		
-		
-		
-		
-		
-		
+
 		
 //		System.out.println("set.add(book) :"+set.add(book));
 		//vegitatrian 과seq가 같은 새 객체 book을 넣도록 추가
@@ -69,7 +70,7 @@ public class SetTest {
 		//beghitarian과 같은 seq1을 갖는 book 추가되지 않음 
 		
 		//(2) set의 내용 출력 
-		System.out.println("====set의 내용출력========"); 
+		System.out.println("\n====set의 내용출력========"); 
 		//set클래스는 toString() 재정의 해 두었음 
 		System.out.println(set);
 		
@@ -79,6 +80,7 @@ public class SetTest {
 		for(Object obj : set) { 
 			System.out.println(obj);
 		}
+		
 		
 		
 	}

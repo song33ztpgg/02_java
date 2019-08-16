@@ -48,20 +48,26 @@ public class ListTest {
 		//3.사용 
 		//3.1 리스트에 아이템 추가 : Collection의 add(object) 메소드 사용 
 		System.out.println("1】 list.add(첫번째 엘리) :" +list.add("첫번째 엘리먼트"));
+		System.out.println("\t list = " +list);
 		
 		// auto -boxing
 		System.out.println("2】 list.add(2) : " +list.add(2));
+		System.out.println("\t list = " +list);
 		
 		//Double 타입의 테이터 
 		System.out.println("3】 list.add(new Double(3.00)) : " +list.add(new Double(3.00))); 
+		System.out.println("\t list = " +list);
 		
 		System.out.println("4】 list.add(new Boolean(true) : " +list.add(new Boolean(true)));
+		System.out.println("\t list = " +list);
 		
 		System.out.println("5】 list.add(new Boolean(true)) : " +list.add(new Boolean(true))); 
+		System.out.println("\t list = " +list);
 		
 		System.out.println("6】 true : " +true);
+		System.out.println("\t list = " +list);
 		
-		Book vegetrian = new Book(111111, "9788936433598", "채식주의자", "한강", "창비", 247, 10000, 10); 
+		Book vegetrian = new Book(1, "9788936433598", "채식주의자", "한강", "창비", 247, 10000, 10); 
 		Book book = new Book(1); 
 		
 		
@@ -72,8 +78,7 @@ public class ListTest {
 		
 		System.out.println("================================");
 		//seq 가 같은 Book 객체 추가 시도
-		System.out.println("7】 list.add(vegetrian)) : " +list.add(vegetrian));
-		
+		System.out.println("7】 list.add(vegetrian)) : " +list.add(vegetrian));		
 		
 		System.out.println("\n===중복데이터 추가 시도 ===");
 		System.out.println("8】 list.add(book) : " +list.add(book));

@@ -1,4 +1,5 @@
-package api.collection;
+package object.test;
+
 
 /**
  * 책 한 권의 정보를 담는 클래스
@@ -73,33 +74,15 @@ public class Book {
 		
 	}
 	
-	public Book(int sequence) {
-		this();
-		setSequence(sequence);
-	}
-	
-	public Book(int sequence, String isbn) {
-		this(sequence);
-		setIsbn(isbn);
-	}
-	
-	public Book(int sequence, String isbn, String title) {
-		this(sequence, isbn);
-		this.title = title;
-	}
-	
-	public Book(int sequence, String isbn, String title, String author, String company, int totalPage, int price,
-			int quantity) {
-		super();
-		this.sequence = sequence;
-		this.isbn = isbn;
-		this.title = title;
-		this.author = author;
-		this.company = company;
+	public Book(String title , int price , int totalPage) { 
+		this(); 
+		this.title = title ;
+		this.price = price; 
 		this.totalPage = totalPage;
-		this.price = price;
-		this.quantity = quantity;
+		
 	}
+	
+	
 
 	// sequence 멤버 변수의 getter
 	public int getSequence() {
@@ -197,12 +180,9 @@ public class Book {
 
 	@Override
 	public String toString() {
-		String message = "【책 정보[일련번호:%d, ISBN:%s"
-	             + ", 제목:%s, 저자:%s"
-	             + ", 출판사:%s, 페이지:%d"
-	             + ", 가격:%d, 재고:%d]】";
+		String message = "【책 정보[제목:%s 페이지:%d 가격:%d,】";
 		
-		return String.format(message, sequence, isbn, title, author, company, totalPage, price, quantity);
+		return String.format(message ,title,totalPage, price);
 	}
 	
 	

@@ -44,7 +44,7 @@ public class KeyboardInputFileOutput {
 		BufferedReader br = new BufferedReader(ir); 
 		
 		//5.출력 : node stream : file : FileWriter 
-		FileWriter fw = new FileWriter("out.txt"); 
+		FileWriter fw = new FileWriter("out0812.txt"); 
 		
 		//6.출력 : filter stream  : writer -- > writer 
 		PrintWriter out = new PrintWriter(fw); 

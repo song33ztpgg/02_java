@@ -29,11 +29,17 @@ public class ImageCopy {
 
 	public static void main(String[] args) throws IOException {
 
-		//1.입력 node stream : FileInputStream 
-		FileInputStream in = new FileInputStream("pic.jpg"); 
+//		//1.입력 node stream : FileInputStream 
+//		FileInputStream in = new FileInputStream("pic.jpg"); 
+//		
+//		//3.출력 node stream : FileOutputStream 
+//		FileOutputStream out = new FileOutputStream("pic-copied.jpg"); 
 		
-		//3.출력 node stream : FileOutputStream 
-		FileOutputStream out = new FileOutputStream("pic-copied.jpg"); 
+//		//1.입력 node stream : FileInputStream 
+		FileInputStream in = new FileInputStream("test.jpg"); 
+				
+//		//3.출력 node stream : FileOutputStream 
+		FileOutputStream out = new FileOutputStream("test-copied.jpg"); 
 		
 		//출력 node stream 선언 초기화 완료 
 		
@@ -47,7 +53,8 @@ public class ImageCopy {
 		//2.2 read(byte[]) 
 		
 		int readSize = 0; 
-		int repeat = 0; 
+		int repeat = 0;
+		
 		//2.3 read() 
 		while ((readSize = in.read(buffer)) != -1) { 
 			//4.write(byte[] )작업
@@ -55,6 +62,15 @@ public class ImageCopy {
 			System.out.printf("읽은 바이트 :%d \t 반복횟수 : %d%n" , readSize , ++repeat);
 		}
 		
+		
+		
+		
+//		while ((readSize = in.read(buffer)) != -1) { 
+//			//4.write(byte[] )작업
+//			out.write(buffer);
+//			System.out.printf("읽은 바이트 :%d \t 반복횟수 : %d%n" , readSize , ++repeat);
+//		}
+
 		
 		//화면 작업 내용 출력 
 		

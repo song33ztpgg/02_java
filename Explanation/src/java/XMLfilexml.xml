@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+
+<mapper>
+    
+    <select id="selectAllProducts" resultType="Product"> 
+                  【맴퍼 이름】              【리턴 타입】
+  
+  ■ 매소드 변환 하는법 
+     
+      // 매소드 이름            // 아규먼트            // 리턴타입
+ <select id="selectAll2"     parameterType="Emp"     resultType="Emp"> 
+  
+  
+  
+    SELECT p.code
+         , p.name
+         , p.price
+         , p.quantity
+      FROM PRODUCT p
+      【sql 구문】
+      
+      
+    </select>           
+   【닫는 부분】        
+    
+</mapper>   
+
+
+=========================================================================================== 
+
+매퍼를 불러오는 법 

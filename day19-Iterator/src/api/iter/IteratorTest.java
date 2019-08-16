@@ -47,6 +47,9 @@ public class IteratorTest {
 		for(int idx = 0 ; idx < 10; idx ++) {
 			set.add(idx);
 		}
+		
+		
+		System.out.println(set);
 		printSet(set);
 		
 //		int[] a = new int[3]; 

@@ -29,7 +29,7 @@ public class FileInput {
 	public static void main(String[] args) throws IOException {
 
 		//1.입력 node stream : FileReader 
-		FileReader fr = new FileReader("out.txt"); 
+		FileReader fr = new FileReader("FileInput0812.txt"); 
 		
 		//2.입력 filter stream : BufferedReader 
 		BufferedReader br = new BufferedReader(fr); 
@@ -37,6 +37,7 @@ public class FileInput {
 		//3.입력 filter stream 의 줄단위 입력 메소드 사용 
 		//readLine() 
 		String input = null; 
+		
 		while ((input = br.readLine()) != null) { 
 			//4,5 
 			System.out.println("파일에서 data " +input); 

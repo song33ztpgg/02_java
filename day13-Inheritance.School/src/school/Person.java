@@ -83,7 +83,6 @@ public abstract class Person {
 	 *      		  출력할때 자동으로 작도하는 메소드 
 	 * */
 	public void print() { 
-		System.out.println("222222");
 		System.out.println(this); 
 	
 		// System.out.println(this.toString());

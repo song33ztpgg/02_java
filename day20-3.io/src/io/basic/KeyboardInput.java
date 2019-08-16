@@ -45,6 +45,7 @@ public class KeyboardInput {
 		//4. 3의 필터 스크림의 편리한 메소드 사용해서 읽기  
 		
 		String readData = null; 
+		
 		try {
 			while((readData = br.readLine()) != null) { 
 				

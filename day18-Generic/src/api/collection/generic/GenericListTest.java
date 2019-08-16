@@ -3,7 +3,7 @@ package api.collection.generic;
 import java.util.ArrayList;
 import java.util.List;
 
-import book.Book;
+
 
 /**
  * 컬렉션에 자장할 타입에 제한을 주는 

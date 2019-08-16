@@ -47,7 +47,7 @@ public class MapTest {
 	
 	//3.2 map 데이터 추출 
 	// get(K);
-	System.out.println(map.get(1)); 
+	System.out.println(map.get("1")); 
 	System.out.println(map.get(2)); 
 	System.out.println(map.get('3'));
 	System.out.println(map.get(4.0)); 

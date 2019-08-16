@@ -39,7 +39,7 @@ public class SchoolTest {
 			// 가상메소드 호출이 되기 위해서는 
 			// 반드시 상속이 전제되어야 함
 			
-			per.print(); 
+			per.print();  
 
 			
 		}
