@@ -1,3 +1,4 @@
+//상속자
 package point;
 /**
  * x,y 좌표를 정수로 가지는 
@@ -58,4 +59,5 @@ public class Point /*extends Object*/ {
 		return Math.sqrt( Math.pow(q.getX() - x, 2) + Math.pow(q.getY() - y, 2) );
 		
 	}
+
 }

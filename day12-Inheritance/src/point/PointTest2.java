@@ -1,3 +1,4 @@
+//상속
 package point;
 
 public class PointTest2 {
