@@ -21,6 +21,11 @@
          , p.quantity
       FROM PRODUCT p
       【sql 구문】
+      WHERE p.price = #{p.test}  
+                      // 자바에 존재하는 p.test를 비교한다          
+      
+      
+      
       
       
     </select>           
@@ -37,5 +42,5 @@
 <시작33> 
 </끝>
 
-참조형이면  새팅을 안하면 null 
+참조형이면 새팅을 안하면 null 
 기본형이면 새팅을 안하면 0
