@@ -1,3 +1,5 @@
+//클래스 정의
+
 package product;
 
 public class ProductTest {
@@ -40,6 +42,7 @@ public class ProductTest {
 		System.out.println(product);
 		System.out.println("==============================");		 
 
+		
 	}
 
 }

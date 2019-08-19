@@ -1,3 +1,5 @@
+// 클래스 정의 
+
 package product;
 /**
  * 전자제품을 판매하는 매장에서 
@@ -77,11 +79,8 @@ public class Product {
 		quantity = quantity - amount;
 		System.out.printf("판매되었습니다. 재고 : %d %n",quantity);
 		
-	
 	} 
 	
-	
-	//
 	public void buy(int amount) {
 		quantity += amount; 
 		System.out.printf("%d 추가하였습니다 . 재고 : %d%n",amount , quantity);
