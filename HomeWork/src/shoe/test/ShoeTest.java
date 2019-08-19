@@ -14,6 +14,8 @@ public class ShoeTest {
 
 	public static void main(String[] args) {
 	
+		
+	
 	//1. Shoe 타입의 객체를 4개 생성
 	//   code 는 1, 2, 3, 4 로 일련번호를 부여
 	//   name, size, price, type 등은 

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+
+<!--
+Emp emp = new Emp(); 
+emp.setEmpno(7698); 
+
+  --> 
+
+
+
+<delete id ="delete2" parameterType ="Emp"> 
+    UPDATE EMP e 
+       SET
+        <if test="ename != null">
+            e.ename = #{ename}
+        </if>
+        <if test="job != null"> 
+        ,   e.job   = #{job} 
+        </if>
+        <if test="mgr != null">
+        ,   e.mgr   = #{mgr} 
+        </if>
+        <if test="hiedate != null">
+        , e.hiredate = TO_DATE(#{hiredate}, 'YYYY-MM-DD HH24:MI:SS) 
+        </if>
+      </set> 
+      <trim prefix = "SET" prefixOverrides = "," /> 
+     WHERE e.enmae =        
+        
+         
+        
+</delete>
