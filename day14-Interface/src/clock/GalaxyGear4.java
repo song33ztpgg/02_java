@@ -1,3 +1,4 @@
+//인터페이스 사용
 package clock;
 
 public class GalaxyGear4 extends SmartWatch {

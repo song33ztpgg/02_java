@@ -1,3 +1,4 @@
+//인터페이스 사용
 package clock;
 
 /**
@@ -41,7 +42,7 @@ public class ClockTest {
 		// clocks 배열에 있는 시계들로부터 displayTime 호출
 		for (Clock clock: clocks) {
 			clock.displayTime();
-		}
+		} 
 		
 	}
 
