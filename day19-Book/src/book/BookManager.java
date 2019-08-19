@@ -151,7 +151,7 @@ public class BookManager {
 		
 		String message;
 		response = new MessageResp(); 
-		if (setCnt > 0) {
+		if (setCnt > 0) {3
 			message = String.format(book.toString() 
 					+ " %d 건을 수정하였습니다.", setCnt);
 		} else {

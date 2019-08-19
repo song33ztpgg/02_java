@@ -32,7 +32,7 @@ import book.resp.SingleResp;
  *
  */
 
-public class BookManager {
+public class ArrayBookShelf {
 
 	// 1. 멤버변수 선언부
 	private BookShelf bookShelf;
@@ -42,12 +42,12 @@ public class BookManager {
 	
 	// 2. 생성자 선언부
 	// (1) 기본 생성자 명시
-	public BookManager() {
+	public ArrayBookShelf() {
 		bookShelf = new BookShelf();
 	}
 	
 	// (2) 매개변수 생성자 작성
-	public BookManager(BookShelf bookShelf) {
+	public ArrayBookShelf(BookShelf bookShelf) {
 		this.bookShelf = bookShelf;
 	}
 	

@@ -18,6 +18,7 @@ public class DataPairTest {
 		DataPair<String, String> ssDataPair; 
 		DataPair<Integer , Book> ibDataPair;
 		
+		
 		//2.초기화 
 		isDataPair = new DataPair<>(1,"one"); 
 		ssDataPair = new DataPair<>("two", "둘"); 
