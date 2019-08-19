@@ -6,7 +6,6 @@ package java;
  
  
  
-
 ■ Set  
 Set set = new HashSet()   
 set.add(value)
@@ -41,4 +40,3 @@ book     -> toString() 여기서 정의한 내용을 가져온다
 map		 ->key = value 로 제정의 
  * */
 
-import java.util.HashMap;
