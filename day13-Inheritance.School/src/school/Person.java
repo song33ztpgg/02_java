@@ -1,3 +1,4 @@
+//상속자
 package school;
 
 /**
