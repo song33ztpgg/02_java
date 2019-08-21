@@ -2,39 +2,34 @@ package sequence;
 
 public class ArithProgression {
 
-	private int start; 
-	private int diff; 
-	private int index; 
-	private int result = 0;
-	
+//	private int start; 
+//	private int diff; 
+//	private int index; 
+	 int result = 0;
+//	
 	public int sequence(int start, int diff, int index) { 
 		
-		start = start - diff; 
-		index--; 
-		result = start 
-				
-		1+3+5+7d을 계산	
-		
-		start + diff * (index - 1);
-		
-		if(index != 0) { 
+		if(index != 0) {
+			result += start + diff * (index - 1);
 			sequence(start, diff, index);
 		}
+		
+		index--;
 		
 		return result;
 	}
 	
-	public void setStart(int start) { 
-		this.start = start;
-	}
-	
-	public void setDiff(int diff) { 
-		this.start = start;
-	}
-	
-	public void setIndex(int index) { 
-		this.start = start;
-	}
+//	public void setStart(int start) { 
+//		this.start = start;
+//	}
+//	
+//	public void setDiff(int diff) { 
+//		this.start = start;
+//	}
+//	
+//	public void setIndex(int index) { 
+//		this.start = start;
+//	}
 	
 }
 
