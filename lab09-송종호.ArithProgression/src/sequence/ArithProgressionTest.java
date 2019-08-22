@@ -12,6 +12,6 @@ public class ArithProgressionTest {
 		System.out.println("항의 개수 3");
 		
 		//결과값 출력 
-		System.out.println(arithProgression.sequence(1,3,3));
+		System.out.println(arithProgression.sequence(1, 3, 3)); 	
 	}
 }
