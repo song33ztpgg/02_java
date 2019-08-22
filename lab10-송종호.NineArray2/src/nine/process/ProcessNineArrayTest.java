@@ -22,16 +22,30 @@ public class ProcessNineArrayTest {
 		Set<Integer> inputValues = new HashSet<Integer>();
 	
 		
-		System.out.println(input.charAt(2));
+//		System.out.println(input.charAt(2));
 		
-		for (int x = 0; x < input.length(); x++) {
-			
-//			inputValues.add((int) input.charAt(x)); 
-		}  
+//		for (int x = 0; x < input.length(); x++) {
+//			
+////			inputValues.add((int) input.charAt(x)); 
+//		}  
 		
 //		for (Set inputValue : inputValues) {
 //			
 //		}
+		
+//		@Override
+//		public List<Book> getAllBooks() {
+//			// Set<Book> ===> List<Book> 
+//			// (1) API 메소드 사용하여 변환
+//			List<Book> bookList = 
+//					Arrays.asList(books.toArray(new Book[] {}));
+//			
+////			List<Book> bookList = new ArrayList<>();
+////			for (Book book: books) {
+////				bookList.add(book);
+////			}
+			
+//			return bookList;
 	
 //		inputValues
 		
