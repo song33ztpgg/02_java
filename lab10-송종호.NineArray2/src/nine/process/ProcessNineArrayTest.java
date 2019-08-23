@@ -1,8 +1,10 @@
 package nine.process;
 
-import java.util.HashSet;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
-import java.util.Set;
+
+import org.omg.CORBA.INTERNAL;
 
 public class ProcessNineArrayTest {
 	public static void main(String[] args) {
@@ -10,24 +12,64 @@ public class ProcessNineArrayTest {
 		ProcessNineArray processNineArray = new ProcessNineArray();
 
 		System.out.println("입력값 예시");
-		System.out.println("1 3 3 3 3 5 6 - 7 - 9");
+		System.out.println("1 3 3 3 3 4 7 - 9");
 		
 		// Scanner 초기화
 		// 자바는 단일 문자 받는 값이 없기에 문자열로 값을 받는다.
 		Scanner scan = new Scanner(System.in);
-		String input = scan.nextLine();
+		String input = scan.nextLine(); 
+		System.out.println();
+	
+		String[] finalValue = input.split(" ");
 		
-//		// 입력값을 정리하여 담는 배열
-//		// set은 동일 값을 받지 않기 때문에 중복된 값을 모두 제거 한다.
-		Set<Integer> inputValues = new HashSet<Integer>();
+		System.out.println("첫 분류");
+		for (int idx = 0; idx < finalValue.length; idx++) { 
+			System.out.printf(" ");
+			System.out.printf(finalValue[idx]);
+		}   
+		
+		
+		
+		int count = 0;
+		
+		int[] temp = new int[finalValue.length-1];
+		
+		for (int idx = 0; idx < finalValue.length; idx++) {		
+			
+			String tempString = finalValue[idx + 1];
+			
+			if (tempString.equals("-")) {	
+				
+				int fistNumInt = Integer.parseInt(finalValue[idx]); 
+				int endNumInt = Integer.parseInt(finalValue[idx + 2]);
+				int difference = endNumInt - fistNumInt;
+						
+				for(; fistNumInt < endNumInt; fistNumInt++) { 
+					temp[count] = fistNumInt;
+					count++;
+					idx++;
+				} 
+				
+				
+			} else if (finalValue[idx] != finalValue[idx + 1]) { 
+				
+				int numInt = Integer.parseInt(finalValue[idx]);
+				temp[count] = numInt;
+				count++; 
+				}
+			
+		}
 	
 		
-//		System.out.println(input.charAt(2));
+		System.out.println("최종 결과물");		
+		for(int idx = 0 ; idx < temp.length; idx++) {
+			System.out.println(temp[idx]);
+		}
 		
-//		for (int x = 0; x < input.length(); x++) {
-//			
-////			inputValues.add((int) input.charAt(x)); 
-//		}  
+	
+
+		
+		
 		
 //		for (Set inputValue : inputValues) {
 //			
